@@ -56,7 +56,7 @@ pm_caption += "😎CREATOR😎    : [Himanshu](https://t.me/H1M4N5HU0P)\n\n"
 
 pm_caption += "🤩SUPPORTER🤩    :[HellBoy](https://t.me/kraken_the_badass)\n\n"
 
-pm_caption += "      [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIABOT) 🔹 [📜License📜](https://github.com/H1M4N5HU0P/MAFIABOT/blob/main/LICENSE)"
+pm_caption += "      [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIA-BOT) 🔹 [📜License📜](https://github.com/H1M4N5HU0P/MAFIA-BOT/blob/main/LICENSE)"
 
 # @command(outgoing=True, pattern="^.alive$")
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
