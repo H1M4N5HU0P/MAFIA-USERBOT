@@ -13,6 +13,8 @@ from . import ALIVE_NAME
 
 naam = str(ALIVE_NAME)
 
+mafia = bot.uid
+
 bots = "@MissRose_bot"
 
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
@@ -300,7 +302,7 @@ EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("(test)Starting Superfban By Modi Ji ...")
+    await event.edit("Starting superfban By [{naam}](tg://user?id={mafia}) ")
     fedList = []
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -338,8 +340,8 @@ async def _(event):
             REASON = " #MassBanned "
     try:
         int(FBAN)
-        if int(FBAN) == 1118936839 or int(FBAN) == 630654925 or int(FBAN) == 719195224 or int(FBAN) == 1212368262 or int(FBAN) == 1425926469:
-            await event.edit("Something Went wrong Vro Dubara Check Kr kya Galat h.")
+        if int(FBAN) == 1118936839 or int(FBAN) == 630654925 or int(FBAN) == 719195224 or int(FBAN) == 1212368262 or int(FBAN) == 1425926469 or int(FBAN) == 1796812875:
+            await event.edit("Something Went wrong!")
             return
     except:
         if (
@@ -350,9 +352,10 @@ async def _(event):
             or FBAN == "@Bhomik16"
             or FBAN == "@H1M4N5HU0P"
             or FBAN == "@Pacifist_Op"
+            or FBAN == "@blackrose_28"
     
         ):
-            await event.edit("Galat Banda Ko Fban Krra h Be.")
+            await event.edit("Something Went wrong!")
             return
     if FBAN_GROUP_ID:
         chat = FBAN_GROUP_ID
@@ -441,7 +444,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Starting a Mass-UnFedBan...")
+    await event.edit("Starting a superunfban by [{naam}](tg://user?id={mafia}) ")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         FBAN = previous_message.sender_id
