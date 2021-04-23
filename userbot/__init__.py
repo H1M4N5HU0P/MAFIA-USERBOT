@@ -7,8 +7,9 @@ from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
 
+
 StartTime = time.time()
-mafiaversion = "2.0"
+mafiaversion = "2.0.1"
 botversion = "0.1"
 
 os.system("pip install --upgrade pip")
@@ -149,7 +150,7 @@ except:
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/H1M4N5HU0P/MAFIABOT.git")
+    "https://github.com/H1M4N5HU0P/MAFIA-BOT.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
