@@ -57,7 +57,7 @@ notifications in Update Channel.
   <summary> <h2>Generate String Session</h2> </summary>
 
 - Termux
-    - Clone `git clone https://github.com/H1M4N5HU0P/MAFIA-BOT`
+    - Clone `git clone https://github.com/H1M4N5HU0P/MAFIA-BOT.git`
     - Then Do  `cd MAFIA-BOT`
     - Run String Generator By
            `bash string.sh`
