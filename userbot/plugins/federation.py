@@ -8,13 +8,14 @@ from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
 
-from mafiabot.utils import admin_cmd , sudo_cmd
-from userbot import ALIVE_NAME 
+from mafiabot.utils import admin_cmd, sudo_cmd
+from userbot import ALIVE_NAME, mafiaversion
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 
 mafia = bot.uid
+
 
 bots = "@MissRose_bot"
 
@@ -303,7 +304,7 @@ EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Starting superfban By [{DEFAULTUSER}](tg://user?id={mafia}) ")
+    await event.edit("Starting superfban By [{DEFAULTUSER}](tg://user?id={mafia}) 😈")
     fedList = []
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -445,7 +446,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Starting a superunfban by [{DEFAULTUSER}](tg://user?id={mafia}) ")
+    await event.edit("Starting a superunfban by [{DEFAULTUSER}](tg://user?id={mafia}) ⚡")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         FBAN = previous_message.sender_id
