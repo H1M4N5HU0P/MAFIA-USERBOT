@@ -161,7 +161,7 @@ async def gben(userbot):
         f"**Globally Demoted [{user.first_name}](tg://user?id={user.id})\n On Chats😏 : {i} **"
     
 
-CmdHelp("globalpromote").add_command(
+CmdHelp("global promote").add_command(
   'gpromote', '<reply> / <userid> / <username>', 'gpromote your friend using this hack'
 ).add_command(
   'gdemote', '<reply> / <userid> / <username>', 'gdemote your enemy using this hack'
