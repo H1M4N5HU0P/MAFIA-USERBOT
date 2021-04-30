@@ -159,7 +159,7 @@ async def gben(userbot):
         await mafia.edit(f"**Reply to a user you dumbo !!**")
     return await mafia.edit(
         f"**Globally Demoted [{user.first_name}](tg://user?id={user.id})\n On Chats😏 : {i} **"
-    
+    )
 
 CmdHelp("global promote").add_command(
   'gpromote', '<reply> / <userid> / <username>', 'gpromote your friend using this hack'
