@@ -5,7 +5,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import BOTLOG, BOTLOG_CHATID, parse_pre
 from .sql_helper import broadcast_sql as sql
-
+from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="sendto(?: |$)(.*)", command="sendto"))
 @bot.on(sudo_cmd(pattern="sendto(?: |$)(.*)", command="sendto", allow_sudo=True))
@@ -342,3 +342,21 @@ async def mafiabroadcast_delete(event):
         )
 
 
+
+CmdHelp("broadcast").add_command(
+  'sendto', 'category_name', 'will send the replied message to all the chats in give category'
+).add_command(
+  'fwdto', 'category_name', 'will forward the replied message to all the chats in give category'
+).add_command(
+  'addto', 'category_name', 'It will add this chat/user/channel to the category of the given name'
+).add_command(
+  'rmfrom', 'category_name', 'To remove the Chat/user/channel from the given category name'
+).add_command(
+  'list', 'category_name', 'Will show the list of all chats in the given category'
+).add_command(
+  'listall', 'category_name', 'Will show the list of all category names'
+).add_command(
+  'frmfrom', 'category_name', 'To force remove the given chat_id from the given category name usefull when you left that chat or banned you there'
+).add_command(
+  'delc', 'category_name', 'Deletes the category completely in database'
+).add()
