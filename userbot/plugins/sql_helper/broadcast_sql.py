@@ -1,3 +1,6 @@
+# credits goes to cat userbot
+# thanks to cat userbot
+
 import threading
 
 from sqlalchemy import Column, String, UnicodeText, distinct, func
