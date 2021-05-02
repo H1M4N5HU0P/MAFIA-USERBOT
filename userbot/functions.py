@@ -230,12 +230,12 @@ async def trumptweet(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=trumptweet&text={text}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.webp", "webp")
     return "temp.webp"
@@ -245,12 +245,12 @@ async def changemymind(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=changemymind&text={text}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
@@ -260,12 +260,12 @@ async def kannagen(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=kannagen&text={text}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.webp", "webp")
     return "temp.webp"
@@ -275,12 +275,12 @@ async def moditweet(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=tweet&text={text}&username=narendramodi"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.webp", "webp")
     return "temp.webp"
@@ -290,12 +290,12 @@ async def tweets(text1, text2):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=tweet&text={text1}&username={text2}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.webp", "webp")
     return "temp.webp"
@@ -303,12 +303,12 @@ async def tweets(text1, text2):
 
 async def iphonex(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=iphonex&url={text}").json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
@@ -318,12 +318,12 @@ async def baguette(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=baguette&url={text}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
@@ -331,12 +331,12 @@ async def baguette(text):
 
 async def threats(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=threats&url={text}").json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -346,12 +346,12 @@ async def threats(text):
 
 async def lolice(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=lolice&url={text}").json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -361,12 +361,12 @@ async def lolice(text):
 
 async def trash(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=trash&url={text}").json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -376,12 +376,12 @@ async def trash(text):
 
 async def awooify(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=awooify&url={text}").json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -393,12 +393,12 @@ async def trap(text1, text2, text3):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=trap&name={text1}&author={text2}&image={text3}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -410,12 +410,12 @@ async def phcomment(text1, text2, text3):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=phcomment&image={text1}&text={text2}&username={text3}"
     ).json()
-    sandy = r.get("message")
-    mafiaurl = url(sandy)
+    h1m4n5hu0p = r.get("message")
+    mafiaurl = url(h1m4n5hu0p)
     if not mafiaurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(sandy).content)
+        f.write(requests.get(h1m4n5hu0p).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
