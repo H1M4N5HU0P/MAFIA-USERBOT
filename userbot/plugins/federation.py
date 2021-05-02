@@ -8,7 +8,7 @@ from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
 
-from mafiabot.utils import admin_cmd, sudo_cmd
+from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import ALIVE_NAME, mafiaversion
 from userbot.cmdhelp import CmdHelp
 
