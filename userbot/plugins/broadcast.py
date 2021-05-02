@@ -1,3 +1,6 @@
+# credits goes to cat userbot
+# thanks to cat userbot
+
 import base64
 from asyncio import sleep
 
