@@ -552,3 +552,93 @@ EMOJI_PATTERN = re.compile(
 def deEmojify(inputString: str) -> str:
     """Remove emojis and other non-safe characters from string"""
     return re.sub(EMOJI_PATTERN, "", inputString)
+
+
+
+# http://effbot.org/imagingbook/imageops.html
+# https://stackoverflow.com/questions/2498875/how-to-invert-colors-of-image-with-pil-python-imaging/38378828
+
+
+async def invert_colors(imagefile, endname):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.invert(image)
+    inverted_image.save(endname)
+
+
+async def flip_image(imagefile, endname):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.flip(image)
+    inverted_image.save(endname)
+
+
+async def grayscale(imagefile, endname):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.grayscale(image)
+    inverted_image.save(endname)
+
+
+async def mirror_file(imagefile, endname):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.mirror(image)
+    inverted_image.save(endname)
+
+
+async def solarize(imagefile, endname):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.solarize(image, threshold=128)
+    inverted_image.save(endname)
+
+
+async def add_frame(imagefile, endname, x, color):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.expand(image, border=x, fill=color)
+    inverted_image.save(endname)
+
+
+async def crop(imagefile, endname, x):
+    image = Image.open(imagefile)
+    inverted_image = PIL.ImageOps.crop(image, border=x)
+    inverted_image.save(endname)
+
+
+# for stickertxt
+async def waifutxt(text, chat_id, reply_to_id, bot, borg):
+    animus = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        9,
+        15,
+        20,
+        22,
+        27,
+        29,
+        32,
+        33,
+        34,
+        37,
+        38,
+        41,
+        42,
+        44,
+        45,
+        47,
+        48,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        58,
+        61,
+        62,
+        63,
+    ]
+    sticcers = await bot.inline_query("stickerizerbot", f"#{choice(animus)}{text}")
+    mafia = await sticcers[0].click("me", hide_via=True)
+    if mafia:
+        await bot.send_file(int(chat_id), mafia, reply_to=reply_to_id)
+        await mafia.delete()
