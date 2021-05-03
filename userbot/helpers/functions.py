@@ -2,7 +2,7 @@
 # thanks to @ranger_op for idea
 # codes by @mrconfused
 # catuserbot
-
+# thanks to catuserbot
 import os
 
 try:
@@ -33,6 +33,20 @@ def utc_to_local(utc_datetime):
         now_timestamp
     )
     return utc_datetime + offset
+
+# gban
+
+async def admin_groups(mafia):
+    mafiagroups = []
+    async for dialog in mafia.client.iter_dialogs():
+        entity = dialog.entity
+        if (
+            isinstance(entity, Channel)
+            and entity.megagroup
+            and (entity.creator or entity.admin_rights)
+        ):
+            mafiagroups.append(entity.id)
+    return mafiagroups
 
 async def take_screen_shot(video_file, output_directory, ttl):
     # https://stackoverflow.com/a/13891070/4723940
