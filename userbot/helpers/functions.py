@@ -20,12 +20,19 @@ from PIL import Image
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from validators.url import url
 
+
 MARGINS = [50, 150, 250, 350, 450]
 
 
 # For using gif , animated stickers and videos in some parts , this
 # function takes  take a screenshot and stores ported from userge
 
+def utc_to_local(utc_datetime):
+    now_timestamp = time.time()
+    offset = datetime.fromtimestamp(now_timestamp) - datetime.utcfromtimestamp(
+        now_timestamp
+    )
+    return utc_datetime + offset
 
 async def take_screen_shot(video_file, output_directory, ttl):
     # https://stackoverflow.com/a/13891070/4723940
