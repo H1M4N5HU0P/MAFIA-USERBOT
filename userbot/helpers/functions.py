@@ -18,6 +18,7 @@ import requests
 from bs4 import BeautifulSoup
 from PIL import Image
 from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl.types import Channel, PollAnswer
 from validators.url import url
 
 
