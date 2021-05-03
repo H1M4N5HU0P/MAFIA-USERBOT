@@ -8,7 +8,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import BOTLOG, BOTLOG_CHATID
 from userbot.helpers.format import parse_pre
-from userbot.sql_helper import broadcast_sql as sql
+from userbot.plugins.sql_helper import broadcast_sql as sql
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="sendto(?: |$)(.*)", command="sendto"))
