@@ -9,7 +9,7 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.1"
+mafiaversion = "2.0.4"
 botversion = "0.1"
 
 os.system("pip install --upgrade pip")
