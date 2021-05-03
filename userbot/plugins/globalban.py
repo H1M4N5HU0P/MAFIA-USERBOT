@@ -87,7 +87,7 @@ async def mafiagban(event):
         await mafiabot.edit("`you are not admin of atleast one group` ")
         return
     await mafiabot.edit(
-        f"[{user.first_name}](tg://user?id={user.id}) Beta majdur ko khodna aur [{HIMANSHU}](tg://user?id={papa}) ko chodna kabhi sikhana nhi.😏\n\n**Gban Successful ?\nAffected Chats?? : {len(him)}  **"
+        f"[{user.first_name}](tg://user?id={user.id}) Beta majdur ko khodna aur [{HIMANSHU}](tg://user?id={papa}) ko chodna kabhi sikhana nhi.😏\n\n**Gban Successful😏\nAffected Chats?? : {len(him)}  **"
     )
     for i in range(h1m4n5hu0p):
         try:
@@ -166,7 +166,7 @@ async def mafiagban(event):
         await mafiabot.edit("`you are not even admin of atleast one group `")
         return
     await mafiabot.edit(
-        f"**[{user.first_name}](tg://user?id={user.id}) Aur bhai.... Aagya swaad.😂🤣**\n\nUngban Successful ?\nChats :- `{len(him)}`"
+        f"**[{user.first_name}](tg://user?id={user.id}) Aur bhai... Aagya swaad?😂🤣🤣**\n\nUngban Successful ?\nChats :- `{len(him)}`"
     )
     for i in range(h1m4n5hu0p):
         try:
@@ -223,10 +223,10 @@ async def gablist(event):
     if len(gbanned_users) > 0:
         for a_user in gbanned_users:
             if a_user.reason:
-                GBANNED_LIST += f"?? [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
+                GBANNED_LIST += f"😏 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
             else:
                 GBANNED_LIST += (
-                    f"?? [{a_user.chat_id}](tg://user?id={a_user.chat_id}) Reason None\n"
+                    f"😏 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) Reason None\n"
                 )
     else:
         GBANNED_LIST = "no Gbanned Users (yet)"
@@ -262,7 +262,7 @@ async def mafiagkick(event):
         await mafiabot.edit("`you are not admin of atleast one group` ")
         return
     await mafiabot.edit(
-        f"`Bahot bol rahe ho beta gaand parr laat khao `[{user.first_name}](tg://user?id={user.id}) `beta aur nikkal {len(him)} groups se😏`"
+        f"`Bahot bol rahe ho beta gaand parr laat kha `[{user.first_name}](tg://user?id={user.id}) `beta aur nikkal {len(him)} groups se😏`"
     )
     for i in range(h1m4n5hu0p):
         try:
@@ -312,30 +312,30 @@ async def mafiagkick(event):
             await reply.forward_to(BOTLOG_CHATID)
 
  
-@borg.on(ChatAction)
-async def handler(him): 
-   if him.user_joined or him.user_added:      
+@bot.on(ChatAction)
+async def handler(h1m4n5hu0p): 
+   if h1m4n5hu0p.user_joined or h1m4n5hu0p.user_added:      
        try:       	
          from userbot.plugins.sql_helper.gmute_sql import is_gmuted
-         guser = await him.get_user_from_event()      
-         gmuted = is_gmuted(guser.id)             
+         user = await h1m4n5hu0p.get_user_from_event()      
+         gmuted = is_gmuted(user.id)             
        except:      
           return
        if gmuted:
         for i in gmuted:
-            if i.sender == str(guser.id):                                                                         
-                chat = await him.get_chat()
+            if i.sender == str(user.id):                                                                         
+                chat = await h1m4n5hu0p.get_chat()
                 admin = chat.admin_rights
                 creator = chat.creator   
                 if admin or creator:
                  try:
-                    await client.edit_permissions(him.chat_id, guser.id, view_messages=False)                              
-                    await him.reply(
+                    await client.edit_permissions(h1m4n5hu0p.chat_id, user.id, view_messages=False)                              
+                    await h1m4n5hu0p.reply(
                      f"⚠️⚠️**Warning**⚠️⚠️\n\n`Gbanned User Joined the chat!!`\n"                      
-                     f"**⚜️ Victim Id ⚜️**:\n[{guser.id}](tg://user?id={guser.id})\n"                   
+                     f"**⚜️ Victim Id ⚜️**:\n[{user.first_name}](tg://user?id={user.id})\n"                   
                      f"**🔥 Action 🔥**  :\n`Banned this piece of shit....` **AGAIN!**")                                                
                  except:       
-                    him.reply("`Shit!! No permission to ban users.\n@admins ban this retard.\nGlobally Banned User And A Potential Spammer`\n**Make your group a safe place by cleaning this shit**")                   
+                    h1m4n5hu0p.reply("`Shit!! No permission to ban users.\n@admins ban this retard.\nGlobally Banned User And A Potential Spammer`\n**Make your group a safe place by cleaning this shit**")                   
                     return
                   
            
