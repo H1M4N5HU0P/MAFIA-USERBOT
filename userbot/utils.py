@@ -64,6 +64,7 @@ def load_module(shortname):
         mod.mafiabot = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_mafia = delete_mafia
+        mod.media_type = media_type
         # support for mafiabot originals
         sys.modules["mafiabot.utils"] = userbot.utils
         sys.modules["mafiabot"] = userbot
