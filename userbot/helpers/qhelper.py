@@ -167,7 +167,7 @@ async def process(msg, user, client, reply, replied=None):
                 cmd = (
                     f"lottie_convert.py --frame 0 -if lottie -of png {sticker} {file_1}"
                 )
-                stdout, stderr = (await _utils.runcmd(cmd))[:2]
+                stdout, stderr = (await utils.runcmd(cmd))[:2]
                 stimg = Image.open("./temp/q.png")
             else:
                 stimg = Image.open(sticker)
