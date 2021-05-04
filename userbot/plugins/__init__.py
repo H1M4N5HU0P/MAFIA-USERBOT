@@ -5,4 +5,3 @@ from userbot.helpers.functions import *
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.events import *
 from userbot.helpers.format import *
-from userbot.helpers.utils import *
