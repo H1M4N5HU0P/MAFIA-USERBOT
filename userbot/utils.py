@@ -10,10 +10,14 @@ import os
 import re
 import sys
 import time
+import shlex
 import traceback
+import functools
 from pathlib import Path
 from time import gmtime, strftime
-
+from typing import Tuple
+from telethon import functions, types
+from userbot import LOGS
 from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
@@ -604,3 +608,44 @@ def command(**args):
         return func
 
     return decorator
+
+
+# executing of terminal commands
+async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
+    args = shlex.split(cmd)
+    process = await asyncio.create_subprocess_exec(
+        *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+    )
+    stdout, stderr = await process.communicate()
+    return (
+        stdout.decode("utf-8", "replace").strip(),
+        stderr.decode("utf-8", "replace").strip(),
+        process.returncode,
+        process.pid,
+    )
+
+
+def run_sync(func, *args, **kwargs):
+    return asyncio.get_event_loop().run_in_executor(
+        None, functools.partial(func, *args, **kwargs)
+    )
+
+
+def run_async(loop, coro):
+    return asyncio.run_coroutine_threadsafe(coro, loop).result()
+
+
+async def unsavegif(event, h1m4n5hu0p):
+    try:
+        await event.client(
+            functions.messages.SaveGifRequest(
+                id=types.InputDocument(
+                    id=h1m4n5hu0p.media.document.id,
+                    access_hash=h1m4n5hu0p.media.document.access_hash,
+                    file_reference=h1m4n5hu0p.media.document.file_reference,
+                ),
+                unsave=True,
+            )
+        )
+    except Exception as e:
+        LOGS.info(str(e))
