@@ -349,5 +349,7 @@ CmdHelp("global_actions").add_command(
 ).add_command(
   'ungmute', '<reply>/ <userid>/ <username>', 'Ungmutes the user. Now targeted user is free'
 ).add_command(
+  'listgban', None, 'To know about who is gbanned in your bot database'
+).add_command(
   'gkick', '<reply>/ <userid>/ <username>', 'Gkick the targeted user. (Works on admins too)'
 ).add()
