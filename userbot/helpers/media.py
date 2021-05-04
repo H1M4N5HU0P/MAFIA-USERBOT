@@ -5,9 +5,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
 
-from userbot.utils import delete_mafia, edit_or_reply
+from userbot.utils import edit_or_reply, delete_mafia, runcmd
 from userbot.helpers.media import media_type
-from userbot.utils import runcmd
 
 
 async def media_to_pic(event, reply):
