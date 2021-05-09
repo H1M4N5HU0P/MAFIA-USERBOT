@@ -5,7 +5,7 @@
 <h1 align="center">⚡ 𝐁𝐋𝐀𝐂 2.0 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ⚡</h1>
 
 
-[![MAFIA LOGO](https://telegra.ph/file/b61486075c6ef73dd0d12.jpg)](https://t.me/MafiaBot_Support)
+[![MAFIA LOGO](https: https://telegra.ph/file/3ccaaaa11ad15e10f6647.jpg ]( https://t.me/BLAC_USERBOT )
 
 
 <h2 align="center">The owner would not be responsible for any kind of bans due to the bot.</h2>
