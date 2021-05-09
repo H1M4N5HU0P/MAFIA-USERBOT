@@ -2,7 +2,7 @@
 <h2 align="center"> <a href="https://github.com/H1M4N5HU0P/MAFIA-USERBOT">🔥 𝚃𝙷𝙴 𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃 🔥</a></h2>
 
 
-<h1 align="center">⚡ 𝙼𝙰𝙵𝙸𝙰 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ⚡</h1>
+<h1 align="center">⚡ 𝐁𝐋𝐀𝐂 2.0 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ⚡</h1>
 
 
 [![MAFIA LOGO](https://telegra.ph/file/b61486075c6ef73dd0d12.jpg)](https://t.me/MafiaBot_Support)
@@ -58,14 +58,14 @@ notifications in Update Channel.
 
 - Termux
     - Clone `git clone https://github.com/H1M4N5HU0P/MAFIA-BOT.git`
-    - Then Do  `cd MAFIA-BOT`
+    - Then Do  `cd -BOT`
     - Run String Generator By
            `bash string.sh`
     - Then Fill The Required Details.
     - API ID, API HASH, PHONE NUMBER (WITH COUNTRY CODE)
  
 - Repl Run
-    - Click [Here](https://replit.com/@H1M4N5HU0P/MAFIABOT#main.py) to open Repl run.
+    - Click [Here](https://replit.com/@JATTGAMINGYT11 /𝐁𝐋𝐀𝐂 #main.py) to open Repl run.
     - Click On Green Play Button.
     - Wait for a while then fill the details.
     - String will be saved in your Saved Message.
@@ -106,9 +106,9 @@ notifications in Update Channel.
 
 ![](https://www.gnu.org/graphics/gplv3-or-later.png)
 
-Copyright (C) 2021 H1M4N5HU0P
+Copyright (C) 2021 @JATTGAMINGYT11
 
-Poject [𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃](https://github.com/H1M4N5HU0P/MAFIA-BOT) is free software: you can redistribute it and/or modify
+Poject [@JATTGAMINGYT11](https://github.com/H1M4N5HU0P/MAFIA-BOT) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
