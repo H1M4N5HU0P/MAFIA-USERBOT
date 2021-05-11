@@ -31,12 +31,12 @@ else:
 
 mafia = bot.uid
 
-edit_time = 10
+edit_time = 16
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/502d3b7372c1c395bba5a.mp4"
-file2 = "https://telegra.ph/file/d938d8f4ecaf2d6e70d31.mp4"
-file3 = "https://telegra.ph/file/52e33f519c5b932082298.mp4"
-file4 = "https://telegra.ph/file/16f20e53ebab4474b7ea3.jpg"
+file1 = "https://telegra.ph/file/2408a2877646132ac52fd.mp4"
+file2 = "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
+file3 = "https://telegra.ph/file/0b2862d312a2aeb804b36.mp4"
+file4 = "https://telegra.ph/file/866c79e351350a08f2b06.mp4"
 """ =======================CONSTANTS====================== """
 pm_caption = "  __**🔥🔥𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 𝕀𝕊 𝔸𝕃𝕀𝕍𝔼🔥🔥**__\n\n"
 
@@ -86,6 +86,27 @@ async def amireallyalive(alive):
     
     await asyncio.sleep(edit_time)
     ok7 = await borg.edit_message(alive.chat_id, ok6, file=file1)
+    
+    await asyncio.sleep(edit_time)
+    ok8 = await borg.edit_message(alive.chat_id, ok7, file=file2) 
+
+    await asyncio.sleep(edit_time)
+    ok9 = await borg.edit_message(alive.chat_id, ok8, file=file3)
+
+    await asyncio.sleep(edit_time)
+    ok10 = await borg.edit_message(alive.chat_id, ok9, file=file1)
+    
+    await asyncio.sleep(edit_time)
+    ok11 = await borg.edit_message(alive.chat_id, ok10, file=file3)
+    
+    await asyncio.sleep(edit_time)
+    ok12 = await borg.edit_message(alive.chat_id, ok11, file=file2)
+    
+    await asyncio.sleep(edit_time)
+    ok13 = await borg.edit_message(alive.chat_id, ok12, file=file4)
+    
+    await asyncio.sleep(edit_time)
+    ok14 = await borg.edit_message(alive.chat_id, on, file=file1)
 
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, caption=pm_caption)
