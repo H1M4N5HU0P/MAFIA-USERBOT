@@ -56,6 +56,5 @@ print(f"""MAFIABOT IS ON!!! MAFIABOT VERSION :- {mafiaversion} YOUR 𝕄𝔸𝔽
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
-    print(f"""U GOT ERROR'S PLEASE SAVE YOUR LOGS AND SEND HERE @MAFIABOT_CHIT_CHAT """)
 else:
     bot.run_until_disconnected()
