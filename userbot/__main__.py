@@ -12,6 +12,7 @@ from pathlib import Path
 import asyncio
 import telethon.utils
 
+os.system("pip install -U telethon")
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -33,9 +34,9 @@ else:
             api_hash=Var.API_HASH
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
         print("Initialisation finished with no errors")
-        print("Starting Userbot")
+        print("Starting MafiaBot")
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
-        print("Startup Completed")
+        print("MafiaBot Startup Completed")
     else:
         bot.start()
 
@@ -55,5 +56,6 @@ print(f"""MAFIABOT IS ON!!! MAFIABOT VERSION :- {mafiaversion} YOUR 𝕄𝔸𝔽
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
+    print(f"""U GOT ERROR'S PLEASE SAVE YOUR LOGS AND SEND HERE @MAFIABOT_CHIT_CHAT """)
 else:
     bot.run_until_disconnected()
