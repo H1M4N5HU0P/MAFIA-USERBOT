@@ -2,7 +2,7 @@ import os
 import sys
 import time
 from telethon.sessions import StringSession
-from telethon import TelegramClient
+from telethon import TelegramClient, events, sync
 from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
@@ -12,7 +12,7 @@ StartTime = time.time()
 mafiaversion = "2.0.4"
 botversion = "0.1"
 
-os.system("pip install --upgrade pip")
+os.system("pip install aria2p")
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
     bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
@@ -32,7 +32,7 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-mafia_ID = ["1212368262"]
+MAFIA_ID = ["1212368262"]
 
 """ PPE initialization. """
 
