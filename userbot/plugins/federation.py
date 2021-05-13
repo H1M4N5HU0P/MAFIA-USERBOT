@@ -1,9 +1,10 @@
 # Plugin to show the feds you are banned in.
 # Kangers keep credits
 # By @Surv_ivor
+# fixed some issues by @H1M4N5HU0P
 
 import os
-
+import asyncio
 from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
@@ -50,8 +51,10 @@ async def _(event):
                 if "file" in fedstat.text:
                     await fedstat.click(0)
                     reply = await conv.get_response()
+                    await asyncio.sleep(5)
                     await event.client.forward_messages(event.chat_id, reply)
                 else:
+                    await asyncio.sleep(5)
                     await event.client.forward_messages(event.chat_id, fedstat)
                 await event.delete()
             except YouBlockedUserError:
@@ -66,8 +69,10 @@ async def _(event):
                 if "file" in fedstat.text:
                     await fedstat.click(0)
                     reply = await conv.get_response()
+                    await asyncio.sleep(5)
                     await event.client.forward_messages(event.chat_id, reply)
                 else:
+                    await asyncio.sleep(5)
                     await event.client.forward_messages(event.chat_id, fedstat)
                 await event.delete()
             except YouBlockedUserError:
@@ -94,7 +99,7 @@ async def _(event):
                 await conv.send_message("/start")
                 await conv.get_response()
                 await conv.send_message("/info " + getuser)
-                audio = await conv.get_response()
+                audio = await conv.get_response()                
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
             except YouBlockedUserError:
@@ -105,7 +110,7 @@ async def _(event):
                 await conv.send_message("/start")
                 await conv.get_response()
                 await conv.send_message("/info " + sysarg)
-                audio = await conv.get_response()
+                audio = await conv.get_response()                
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
             except YouBlockedUserError:
@@ -125,6 +130,7 @@ async def _(event):
                 await conv.get_response()
                 await conv.send_message("/fedinfo")
                 fedinfo = await conv.get_response()
+                await asyncio.sleep(1)
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
             except YouBlockedUserError:
@@ -136,6 +142,7 @@ async def _(event):
                 await conv.get_response()
                 await conv.send_message("/fedinfo " + sysarg)
                 fedinfo = await conv.get_response()
+                await asyncio.sleep(1)
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
             except YouBlockedUserError:
@@ -156,8 +163,10 @@ async def _(event):
             if "file" in myfed.text:
                 await myfed.click(0)
                 reply = await conv.get_response()
+                await asyncio.sleep(1)
                 await event.client.forward_messages(event.chat_id, reply)
             else:
+                await asyncio.sleep(1)
                 await event.client.forward_messages(event.chat_id, myfed)
                 await event.delete()
         except YouBlockedUserError:
@@ -342,7 +351,7 @@ async def _(event):
             REASON = " #MassBanned "
     try:
         int(FBAN)
-        if int(FBAN) == 1118936839 or int(FBAN) == 630654925 or int(FBAN) == 719195224 or int(FBAN) == 1212368262 or int(FBAN) == 1425926469 or int(FBAN) == 1796812875:
+        if int(FBAN) == 1118936839 or int(FBAN) == 630654925 or int(FBAN) == 719195224 or int(FBAN) == 1212368262 or int(FBAN) == 1425926469:
             await event.edit("Something Went wrong!")
             return
     except:
@@ -354,10 +363,9 @@ async def _(event):
             or FBAN == "@Bhomik16"
             or FBAN == "@H1M4N5HU0P"
             or FBAN == "@Pacifist_Op"
-            or FBAN == "@blackrose_28"
     
         ):
-            await event.edit("Something Went wrong!")
+            await event.edit("Hey Nigga, You can't superfban your father😏")
             return
     if FBAN_GROUP_ID:
         chat = FBAN_GROUP_ID
@@ -435,7 +443,7 @@ async def _(event):
             continue
         await event.client.send_message(chat, f"/joinfed {fed}")
         await asyncio.sleep(3)
-        await event.client.send_message(chat, f"/fban {FBAN} {REASON}")
+        await event.client.send_message(chat, f"/fban {FBAN} {REASON} \n\n#SUPERFBAN_BY_MAFIABOT")
         await asyncio.sleep(3)
     await event.edit(f"SuperFBan Completed. Affected {len(fedList) - exCount} feds by [{DEFAULTUSER}](tg://user?id={mafia}) 😈")
 
@@ -510,7 +518,7 @@ async def _(event):
     for fed in fedList:
         await event.client.send_message(chat, f"/joinfed {fed}")
         await asyncio.sleep(3)
-        await event.client.send_message(chat, f"/unfban {FBAN}")
+        await event.client.send_message(chat, f"/unfban {FBAN} \n\n#SUPERUNFBAN_BY_MAFIABOT")
         await asyncio.sleep(3)
     await event.edit(f"SuperUnFBan Completed. Affected {len(fedList)} feds by [{DEFAULTUSER}](tg://user?id={mafia}) ⚡")
     
