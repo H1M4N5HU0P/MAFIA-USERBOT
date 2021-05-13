@@ -5,7 +5,7 @@ import sys
 import git
 
 from userbot.Config import Config
-from mafiabot.utils import admin_cmd
+from mafiabot.utils import admin_cmd, sudo_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -32,6 +32,7 @@ RESTARTING_APP = "re-starting heroku application"
 
 
 @borg.on(admin_cmd("update ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="scan ?(.*)", allow_sudo=True))
 async def updater(message):
     try:
         repo = git.Repo()
