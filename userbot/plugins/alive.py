@@ -63,7 +63,7 @@ pm_caption += "      [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIA-BOT) �
 @bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def amireallyalive(alive):
     await alive.get_chat()   
-    
+    await alive.delete()
     on = await borg.send_file(alive.chat_id, file=file1,caption=pm_caption)
 
     await asyncio.sleep(edit_time)
