@@ -80,3 +80,5 @@ tswift
 youtube-dl>=2021.02.04.1
 youtube-search-python>=1.3.2
 youtube-search>=1.1.1
+cloudscraper
+pyaztro
