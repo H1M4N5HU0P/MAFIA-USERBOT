@@ -47,5 +47,5 @@ async def astro(e):
 
 
 CmdHelp("horoscope").add_command(
-"hs", "<sign>", "Usage: it will show horoscope of daily of your sign",  "List of all signs - aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius and pisces."
+"hs", "<sign>", "Usage: it will show horoscope of daily of your sign\nList of all signs - aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius and pisces."
 ).add()
