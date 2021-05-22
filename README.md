@@ -36,6 +36,8 @@
 
 • [Hêllẞø†](https://github.com/thevaders/vader)
 
+• [Kittu](https://t.me/A_viyu)
+
 </details>
 <details>
   <summary> <h4>Official Supports ✅</h4> </summary>
