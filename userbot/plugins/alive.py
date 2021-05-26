@@ -41,15 +41,16 @@ file4 = "https://telegra.ph/file/866c79e351350a08f2b06.mp4"
 pm_caption = "  __**🔥🔥𝐌𝐀𝐅𝐈𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄🔥🔥**__\n\n"
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
-
+pm_caption += (
+    f"                 👑𝐌𝐀𝐒𝐓𝐄𝐑👑\n  **『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
+)
 pm_caption += f"┏━━━━━━━━━━━━━━━━━━━\n"
-pm_caption += f"┣[• `Master:` 『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』\n"
-pm_caption += f"┣[• `Telethon:` `1.15.0` \n"
-pm_caption += f"┣[• `Version:` `{mafiaversion}`\n"
-pm_caption += f"┣[• `Sudo:` `{sudou}`\n"
-pm_caption += f"┣[• `Channel:` [ᴊᴏɪɴ](https://t.me/MafiaBot_Support)\n"
-pm_caption += f"┣[• `Creator:` [Himanshu](https://t.me/H1M4N5HU0P)\n"
-pm_caption += f"┣[• `Supporter:` [HellBoy](https://t.me/kraken_the_badass)\n"
+pm_caption += f"┣•➳➠ `Telethon:` `1.15.0` \n"
+pm_caption += f"┣•➳➠ `Version:` `{mafiaversion}`\n"
+pm_caption += f"┣•➳➠ `Sudo:` `{sudou}`\n"
+pm_caption += f"┣•➳➠ `Channel:` [ᴊᴏɪɴ](https://t.me/MafiaBot_Support)\n"
+pm_caption += f"┣•➳➠ `Creator:` [Himanshu](https://t.me/H1M4N5HU0P)\n"
+pm_caption += f"┣•➳➠ `Supporter:` [HellBoy](https://t.me/kraken_the_badass)\n"
 pm_caption += f"┗━━━━━━━━━━━━━━━━━━━\n"
 pm_caption += " [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIA-BOT) 🔹 [📜License📜](https://github.com/H1M4N5HU0P/MAFIA-BOT/blob/main/LICENSE)"
 
