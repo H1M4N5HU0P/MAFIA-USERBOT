@@ -88,9 +88,9 @@ async def gban(userbot):
     except:
         return await mafiabot.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1212368262:
+        if user.id == 816517310 or user.id == 1212368262:
             return await mafiabot.edit(
-                f"`First Grow Some Balls To Gban My Creater🤫🚶`"
+                f"`First Grow Some Balls To Gban My Creater and my Creaters Freands🤫🚶`"
             )
         try:
             from userbot.plugins.sql_helper.gmute_sql import gmute
@@ -156,8 +156,8 @@ async def gunban(userbot):
     except:
         return await mafiabot.edit("**Som3ting W3nt Wr0ng**")
     if user:
-        if user.id == 1212368262:
-            return await mafiabot.edit("**You need to grow some balls to gban / ungban my creator**")
+        if user.id == 816517310 or user.id == 1212368262:
+            return await mafiabot.edit("**You need to grow some balls to gban / ungban my creator and his freands**")
         try:
             from userbot.plugins.sql_helper.gmute_sql import ungmute
         except:
