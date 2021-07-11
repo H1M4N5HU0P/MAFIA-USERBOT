@@ -105,7 +105,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/H1M4N5HU0P/MAFIA-BOT"),
+                            "✨ REPO ✨", "https://github.com/MafiaBotOP/MafiaBot"),
                         custom.Button.url
                     (
                             "🔰 TUTORIAL 🔰", "https://youtu.be/aRFWP4_RCaE"
