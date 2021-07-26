@@ -623,7 +623,7 @@ async def vapor(vpr):
 @bot.on(sudo_cmd(pattern=f"repo", allow_sudo=True))
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await edit_or_reply(e, "Click [here](https://github.com/H1M4N5HU0P/MAFIA-BOT) to open this 🔥**Lit AF!!**🔥 __MAFIABOT__ Repo.. Join channel :- @MafiaBot_Support")
+        await edit_or_reply(e, "Click [here](https://github.com/MafiaBotOP/MafiaBot) to open this 🔥**Lit AF!!**🔥 __MAFIABOT__ Repo.. Join channel :- @MafiaBot_Support")
 
 
 @bot.on(admin_cmd(pattern="str(?: |$)(.*)", outgoing=True))
