@@ -1,6 +1,6 @@
 """Upload local Files to Mirrorace
 Syntax:
-.ma"""
+.mirrorace"""
 
 import asyncio
 import os
@@ -13,8 +13,8 @@ from mafiabot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="ma ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="ma ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mirrorace ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="mirrorace ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -168,5 +168,5 @@ async def _(event):
         await mone.edit("File Not found in local server. Give me a file path :((")
 
 CmdHelp("mirrorace").add_command(
-  "ma", "<file path>", "Uploads files to MirrorAce from local file path."
+  "mirrorace", "<file path>", "Uploads files to MirrorAce from local file path."
 ).add()
