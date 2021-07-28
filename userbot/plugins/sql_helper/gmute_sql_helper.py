@@ -1,4 +1,7 @@
-from . import SESSION, BASE
+try:
+    from userbot.plugins.sql_helper import SESSION, BASE
+except ImportError:
+    raise Exception("Hello!")
 
 from sqlalchemy import Column, String
 
@@ -35,3 +38,10 @@ def ungmute(sender, chat_id):
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
+        
+
+def all_gmuted():
+    rem = SESSION.query(GMute).all()
+    SESSION.close()
+    return rem        
+        
