@@ -1,4 +1,5 @@
-from . import SESSION, BASE
+from userbot.plugins.sql_helper import BASE, SESSION
+
 from sqlalchemy import Column, String
 
 
