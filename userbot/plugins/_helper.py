@@ -14,7 +14,7 @@ from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.BOT_USERNAME
+    tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
