@@ -92,18 +92,27 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
-    
-      elif event.query.user_id == bot.uid and query == "repo":
+        elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
                 text=f"**༆ʟɛɢɛռɖaʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ༆**",
                 buttons=[
                     [Button.url("📑 𝖱𝖾𝗉𝗈 📑", "https://github.com/MafiaBotOP/MafiaBot")],
                     [Button.url("🚀 𝖣𝖾𝗉𝗅𝗈𝗒 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMafiaBotOP%2FMafiaBot&template=https%3A%2F%2Fgithub.com%2FMafiaBotOP%2FMafiaBot")],
-                    [Button.url("✵ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 ✵", "https://t.me/MafiaBot_Support")],
+                    [Button.url("✵ _𝖲𝗎𝗉𝗉𝗈𝗋𝗍_ ✵", "https://t.me/MafiaBot_Support")],
                 ],
             )
 
+        elif query.startswith("http"):
+            part = query.split(" ")
+            result = builder.article(
+                "File uploaded",
+                text=f"**𝖥𝗂𝗅𝖾 𝗎𝗉𝗅𝗈𝖺𝖽𝖾𝖽 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝗍𝗈 {part[2]} site.\𝗇𝖴𝗉𝗅𝗈𝖽𝖾𝖽 𝖳𝗂𝗆𝖾 : {part[1][:3]} 𝗌𝖾𝖼𝗈𝗇𝖽\n[‏‏‎ ‎]({part[0]})",
+                buttons=[[custom.Button.url("URL", part[0])]],
+                link_preview=True,
+            )
+    
+      
         elif event.text=='':
             result = builder.article(
                 "@MafiaBot_Support",
