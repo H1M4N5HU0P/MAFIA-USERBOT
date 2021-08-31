@@ -27,6 +27,7 @@ from userbot import *
 from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
+from telethon import Button
 
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
