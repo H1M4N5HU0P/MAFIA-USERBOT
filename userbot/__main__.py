@@ -54,7 +54,6 @@ for name in files:
 import userbot._core
 
 print(f"""MAFIABOT IS ON!!! MAFIABOT VERSION :- {mafiaversion} YOUR 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @MafiaBot_Support .""")
-
 async def mafia_is_on():
     try:
         if Config.PM_LOGGR_BOT_API_ID != 0:
@@ -66,15 +65,7 @@ async def mafia_is_on():
     except Exception as e:
         LOGS.info(str(e))
 
-
-    try:
-        await bot(JoinChannelRequest(" @MafiaBot_Support"))
-    except BaseException:
-        pass
-
-
 bot.loop.create_task(mafia_is_on())
-
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
