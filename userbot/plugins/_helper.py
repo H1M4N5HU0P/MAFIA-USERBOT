@@ -23,7 +23,7 @@ async def repo(event):
     try:
         mafia = await bot.inline_query(botname, "repo")
         await mafia[0].click(event.chat_id)
-        if event.sender_id == d3krish:
+        if event.sender_id == h1m4n5hu0p:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
