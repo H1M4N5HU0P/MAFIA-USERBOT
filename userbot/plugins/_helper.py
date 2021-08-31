@@ -4,7 +4,7 @@ import asyncio
 import requests
 from telethon import functions
 from telethon.errors import ChatSendInlineForbiddenError as noin
-from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
+from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInlineDisabledError as noinline, YouBlockedUserError
 
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
