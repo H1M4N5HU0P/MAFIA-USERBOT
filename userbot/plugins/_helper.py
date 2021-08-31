@@ -7,6 +7,24 @@ from telethon import functions
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
+msg = f"""
+**༆ʟɛɢɛռɖaʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ༆**
+  •        [⚜️ 𝐑𝐞𝐩𝐨 ⚜️](https://github.com/MafiaBotOP/MafiaBot)
+  •        [⚡ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ⚡](https://t.me/MafiaBot_Support)
+ 
+"""
+botname = Config.TG_BOT_USER_NAME_BF_HER
+
+@bot.on(admin_cmd(pattern="repo$"))
+@bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
+async def repo(event):
+    try:
+        mafia = await bot.inline_query(botname, "repo")
+        await mafia[0].click(event.chat_id)
+        if event.sender_id == d3krish:
+            await event.delete()
+    except (noin, dedbot):
+        await eor(event, msg)
 
 @bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
 async def yardim(event):
