@@ -92,6 +92,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
+    
       elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
@@ -102,6 +103,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     [Button.url("✵ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 ✵", "https://t.me/MafiaBot_Support")],
                 ],
             )
+
         elif event.text=='':
             result = builder.article(
                 "@MafiaBot_Support",
