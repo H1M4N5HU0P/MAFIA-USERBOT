@@ -24,7 +24,7 @@ async def _(event):
             )
             await event.delete()
         except noinline:
-            mafia = await eor(event, "**Inline Mode is disabled.** \n__Turning it on, please wait for a minute...__")
+            mafia = await edit_or_reply(event, "**Inline Mode is disabled.** \n__Turning it on, please wait for a minute...__")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setinline")
@@ -41,7 +41,7 @@ async def _(event):
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
             )
     else:
-        await eor(event, "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.")
+        await edit_or_reply(event, "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.")
 
 @bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
 async def yardim(event):
