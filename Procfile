@@ -1,1 +1,1 @@
-userbot: python -m userbot
+web: bash start.sh
