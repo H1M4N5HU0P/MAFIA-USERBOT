@@ -79,8 +79,3 @@ async def _(event):
         await event.delete()
     except Exception as e:
         await event.edit(str(e))
-
-
-CmdHelp("voice").add_command(
-  "voice", "<lang code> - <reply/text>", "Google Text To Speech Module."
-).add()

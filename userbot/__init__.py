@@ -9,7 +9,7 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.4"
+mafiaversion = "2.0.5"
 botversion = "0.1"
 mafiatelethon = "1.21.1"
 
