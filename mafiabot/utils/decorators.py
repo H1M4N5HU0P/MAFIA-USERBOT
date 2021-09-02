@@ -48,7 +48,7 @@ def mafia_cmd(pattern=None, command=None, **args):
             elif len(Config.HANDLER) == 1:
                 mafiareg = "^\\" + Config.HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(hellreg + pattern)
+            args["pattern"] = re.compile(mafiareg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -62,7 +62,7 @@ def mafia_cmd(pattern=None, command=None, **args):
 
     args["outgoing"] = True
     # decides that other users can use it or not
-    # hellbot outgoing
+    # mafiabot outgoing
     if allow_sudo:
         args["from_users"] = list(Config.SUDO_USERS)
         # Mutually exclusive with outgoing (can only set one of either).
@@ -74,14 +74,14 @@ def mafia_cmd(pattern=None, command=None, **args):
         args["outgoing"] = True
 
     # blacklisted chats. 
-    # hellbot will not respond in these chats.
+    # mafiabot will not respond in these chats.
     args["blacklist_chats"] = True
     black_list_chats = list(Config.BL_CHAT)
     if black_list_chats:
         args["chats"] = black_list_chats
 
     # blacklisted chats.
-    # hellbot will not respond in these chats.
+    # mafiabot will not respond in these chats.
     if "allow_edited_updates" in args and args["allow_edited_updates"]:
         del args["allow_edited_updates"]
 
@@ -116,7 +116,7 @@ def sudo_cmd(pattern=None, command=None, **args):
             elif len(Config.SUDO_HANDLER) == 1:
                 mafiareg = "^\\" + Config.SUDO_HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(hellreg + pattern)
+            args["pattern"] = re.compile(mafiareg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -129,7 +129,7 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
     args["outgoing"] = True
     # outgoing check
-    # hellbot
+    # mafiabot
     if allow_sudo:
         args["from_users"] = list(Config.SUDO_USERS)
         # Mutually exclusive with outgoing (can only set one of either).
@@ -139,17 +139,17 @@ def sudo_cmd(pattern=None, command=None, **args):
     elif "incoming" in args and not args["incoming"]:
         args["outgoing"] = True
     # blacklisted chats
-    # hellbot won't respond here
+    # mafiabot won't respond here
     args["blacklist_chats"] = True
     black_list_chats = list(Config.BL_CHAT)
     if black_list_chats:
         args["chats"] = black_list_chats
     # blacklisted chats
-    # hellbot won't respond here
+    # mafiabot won't respond here
     if "allow_edited_updates" in args and args["allow_edited_updates"]:
         del args["allow_edited_updates"]
     # outgoing check
-    # hellbot
+    # mafiabot
     return events.NewMessage(**args)
 
 
@@ -296,4 +296,5 @@ def command(**args):
         return func
 
     return decorator
+
 
