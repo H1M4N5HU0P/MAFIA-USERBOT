@@ -27,7 +27,6 @@ from userbot import *
 from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
-from telethon import Button
 
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
@@ -93,7 +92,6 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
-     
         elif event.text=='':
             result = builder.article(
                 "@MafiaBot_Support",

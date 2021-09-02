@@ -14,8 +14,8 @@ async def reply_id(event):
 
 
 DEFAULTUSER = ALIVE_NAME or "Mafia User"
-MAFIA_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/d92eaf9ba449ee847e29c.mp4"
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "😈ʟɛɢɛռɖaʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ😈"
+MAFIA_IMG = Config.ALIVE_PIC
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝕃𝕖𝕘𝕖𝕟𝕕𝕒𝕣𝕪_𝔸𝔽_𝕄𝕒𝕗𝕚𝕒𝔹𝕠𝕥"
 
 USERID = bot.uid
 
