@@ -1,5 +1,5 @@
 # credits to userge
-# ported to MafiaBot by @H1M4N5HU0P 
+# ported to MafiaBot by @H1M4N5HU0P
 # will be adding more soon
 
 import asyncio
@@ -53,20 +53,4 @@ CmdHelp("adultzone").add_command(
   'boobs', None, 'Sends a random boobs pic'
 ).add_command(
   'butts', None, 'Sends a random Butt pic'
-).add_command(
-  "xxshort", None, "For Short Se* Videos (Warning 18+ Only) NSFW"
-).add_command(
-  "xxlong", None, "For Long Se* Video"
-).add_command(
-  "xnxx", None, "use and see For 18+ only kids don't use"
-).add_command(
-  "picx", None, "use and see For 18+ only kids don't use"
-).add_command(
-  "les", None, "use and see For 18+ only kids don't use"
-).add_command(
-  "xxshort", None, "For Short Se* Videos (Warning 18+ Only) NSFW"
-).add_command(
-  "xxlong", None, "For Long Se* Video"
-).add_warning(
-  "For 18+ only kids don't use"
 ).add()
