@@ -1,7 +1,7 @@
 import datetime
 from mafiabot import *
-from mafiabot.config import Config
-from mafiabot.helpers import *
+from .config import Config
+from .helpers import *
 from mafiabot.utils import *
 from mafiabot.random_strings import *
 from mafiabot.version import __mafia__
