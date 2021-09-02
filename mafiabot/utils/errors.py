@@ -63,7 +63,7 @@ def errors_handler(func):
 
             ftext += "\n\n\nLast 5 commits:\n"
 
-            process = await asyncio.create_subprocess_shell(
+            process = await asyncio.create_subprocess_smafia(
                 command,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE)
@@ -74,4 +74,5 @@ def errors_handler(func):
             ftext += result
 
     return wrapper
+
 
