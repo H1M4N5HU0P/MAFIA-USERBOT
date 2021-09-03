@@ -12,6 +12,9 @@ from pathlib import Path
 import asyncio
 import telethon.utils
 MAFIA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋"
+mafia = bot.uid
+mafiamention = "[{DEFAULTUSER}](tg://user?id={mafia})"
 
 os.system("pip install -U telethon")
 
@@ -60,7 +63,7 @@ async def mafia_is_on():
             await bot.send_file(
                 Config.PM_LOGGR_BOT_API_ID,
                 MAFIA_PIC,
-                caption=f"༆ʟɛɢɛռɖaʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ༆\n\n**𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➪ {mafiaversion}**\n\n𝐓𝐲𝐩𝐞 .ping or .alive 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤! \n\n𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃 𝙲𝙷𝙰𝚃](t.me/MAFIABOT_CHIT_CHAT) 𝚃𝙾 𝚀𝚄𝙴𝚁𝚈 & 𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰 𝚄𝙿𝙳𝙰𝚃𝙴𝚂](t.me/MafiaBot_Support) 𝚃𝙾 𝙺𝙽𝙾𝚆 𝚁𝙴𝙶𝚁𝙰𝙳𝙸𝙽𝙶 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙽𝙴𝚆𝚂 𝙰𝙱𝙾𝚄𝚃 𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃",
+                caption=f"༆ʟɛɢɛռɖaʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ༆\n\n**𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➪ {mafiaversion}**\n\n{mafiamention}\n\n𝐓𝐲𝐩𝐞 .ping or .alive 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤! \n\n𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃 𝙲𝙷𝙰𝚃](t.me/MAFIABOT_CHIT_CHAT) 𝚃𝙾 𝚀𝚄𝙴𝚁𝚈 & 𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰 𝚄𝙿𝙳𝙰𝚃𝙴𝚂](t.me/MafiaBot_Support) 𝚃𝙾 𝙺𝙽𝙾𝚆 𝚁𝙴𝙶𝚁𝙰𝙳𝙸𝙽𝙶 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙽𝙴𝚆𝚂 𝙰𝙱𝙾𝚄𝚃 𝙼𝙰𝙵𝙸𝙰𝙱𝙾𝚃",
             )
     except Exception as e:
         LOGS.info(str(e))
