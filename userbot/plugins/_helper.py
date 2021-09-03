@@ -9,7 +9,7 @@ from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
-async def yardim(event):
+async def _(event):
     if event.fwd_from:
         return
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
