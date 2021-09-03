@@ -12,9 +12,8 @@ from pathlib import Path
 import asyncio
 import telethon.utils
 MAFIA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
-DEFAULTUSER = Config.ALIVE_NAME or "𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋"
 mafia = bot.uid
-mafiamention = "[{DEFAULTUSER}](tg://user?id={mafia})"
+mafiamention = "tg://user?id={mafia}"
 
 os.system("pip install -U telethon")
 
