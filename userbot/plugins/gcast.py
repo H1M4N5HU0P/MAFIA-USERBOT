@@ -56,3 +56,10 @@ async def gucast(event):
             except BaseException:
                 er += 1
     await kk.edit(f"Done in {done} chats, error in {er} chat(s)")
+
+CmdHelp("gcast").add_command(
+  "gcast", None, "To gcast messages in chat groups."
+).add_command(
+  "gucast", None, "To gcast messages in pm's."
+).add()
+
