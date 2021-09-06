@@ -64,7 +64,7 @@ async def _(mafiaevent):
     await bot.send_file(
         mafiaevent.chat_id,
         file_name,
-        caption=f"**мα∂ε вү  :** 『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』\n\n",
+        caption=f"**мα∂ε вү  :** 『[{DEFAULTUSER}](tg://user?id={mafia})』\n\n",
     )
     await event.delete()
     try:
