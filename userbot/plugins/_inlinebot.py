@@ -15,6 +15,8 @@
 #    This Inline Helper Code is solely owned by @SupRemE_AnanD
 #    You Should Not Copy This Code Without Proper Permission.
 
+# Help Pic feature added by @H1M4N5HU0P
+
 from math import ceil
 from re import compile
 import asyncio
@@ -28,7 +30,7 @@ from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
 
-mafia_help_pic = Config.ALIVE_PIC
+mafia_help_pic = Config.HELP_PIC
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
