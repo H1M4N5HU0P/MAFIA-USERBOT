@@ -29,7 +29,7 @@ async def spammer(e):
         await e.delete()
         if LOGGER:
             await e.client.send_message(
-                LOGGER_GROUP, "#SPAM \n\n" "Spam was executed successfully"
+                LOGGER, "#SPAM \n\n" "Spam was executed successfully"
             )
 
 
@@ -45,7 +45,7 @@ async def bigspam(mafia):
         await mafia.delete()
         if LOGGER:
             await mafia.client.send_message(
-                LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
+                LOGGER, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
 
