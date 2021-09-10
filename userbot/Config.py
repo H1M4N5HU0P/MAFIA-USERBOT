@@ -161,6 +161,7 @@ if ENV:
         EXTRA_MAFIABOT = os.environ.get("EXTRA_MAFIABOT", -1001221881562)
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
         MAFIABOT_LOGGER = int(os.environ.get("MAFIABOT_LOGGER", None))
+        BAN_PIC = os.environ.get("BAN_PIC", None)
         ABUSE = os.environ.get("ABUSE", None)
 else:
     class Config(object):
