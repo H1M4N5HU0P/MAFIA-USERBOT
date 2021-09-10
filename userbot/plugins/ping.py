@@ -7,7 +7,7 @@ from ..cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 h1m4n5hu0p = borg.uid
-
+MAFIA_IMG = Config.ALIVE_PIC
 
 @bot.on(admin_cmd(pattern=f"hbping$", outgoing=True))
 @bot.on(sudo_cmd(pattern=f"hbping$", allow_sudo=True))
@@ -67,9 +67,12 @@ async def _(event):
     event = await edit_or_reply(event, "__**(❛ ᑭσɳց ❜!__**")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(
-        f"__**꧁ Pong! ꧂__**\n\n   ⚘ {ms}\n   ⚘ __**My**__ __**Master**__ [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
-    )
+    if MAFIA_IMG:
+        mafia_caption = f"__**꧁ Pong! ꧂__**\n\n   ⚘ {ms}\n   ⚘ __**My**__ __**Master**__ [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+        await event.client.send_file(
+            event.chat_id, MAFIA_IMG, caption=mafia_caption
+        )
+        await event.delete()
 
 
 CmdHelp("ping").add_command(
