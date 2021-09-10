@@ -164,7 +164,7 @@ def pasty(message, extension=None):
         )
         try:
             await bot.send_message(
-                Config.LOGGER_ID,
+                Config.MAFIABOT_LOGGER,
                 f"#PASTE \n\n**Open Paste From** [here]({purl}). \n**Delete that paste by using this token** `{response['deletionToken']}`",
             )
         except Exception as e:
@@ -179,12 +179,12 @@ def pasty(message, extension=None):
 
 def telegraph_paste(page_title, temxt):
     cl1ent = TelegraphPoster(use_api=True)
-    auth = "[ †he Hêllẞø† ]"
+    auth = "[ LEGENDARY AF MAFIABOT ]"
     cl1ent.create_api_token(auth)
     post_page = cl1ent.post(
         title=page_title,
         author=auth,
-        author_url="https://t.me/its_hellbot",
+        author_url="https://t.me/MafiaBot_Support",
         text=temxt,
     )
     return post_page["url"]
