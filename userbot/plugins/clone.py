@@ -17,8 +17,8 @@ from userbot.cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt"
-BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "LEGENDARY AF MAFIABOT"
+BOTLOG_CHATID = Config.MAFIABOT_LOGGER
 BOTLOG = True
 
 

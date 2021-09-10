@@ -20,11 +20,11 @@ mafia = bot.uid
 
 bots = "@MissRose_bot"
 
-BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
+BOTLOG_CHATID = Config.MAFIABOT_LOGGER
 
-G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", None)
-if G_BAN_LOGGER_GROUP:
-    G_BAN_LOGGER_GROUP = int(G_BAN_LOGGER_GROUP)
+MAFIABOT_LOGGER = os.environ.get("MAFIABOT_LOGGER", None)
+if MAFIABOT_LOGGER:
+    MAFIABOT_LOGGER = int(MAFIABOT_LOGGER)
 
 
 @bot.on(admin_cmd("fstat ?(.*)"))
@@ -256,7 +256,7 @@ async def get_users(show):
 @bot.on(admin_cmd(pattern="bgban ?(.*)"))
 @bot.on(sudo_cmd(pattern="bgban ?(.*)", allow_sudo=True))
 async def _(event):
-    if G_BAN_LOGGER_GROUP is None:
+    if MAFIABOT_LOGGER is None:
         await event.edit("ENV VAR is not set. This module will not work.")
         return
     if event.fwd_from:
@@ -269,7 +269,7 @@ async def _(event):
         else:
             r_sender_id = r.sender_id
         await event.client.send_message(
-            G_BAN_LOGGER_GROUP,
+            MAFIABOT_LOGGER,
             "/gban [user](tg://user?id={}) {}".format(r_sender_id, reason),
         )
     await event.delete()
@@ -278,7 +278,7 @@ async def _(event):
 @bot.on(admin_cmd(pattern="bungban ?(.*)"))
 @bot.on(sudo_cmd(pattern="bungban ?(.*)", allow_sudo=True))
 async def _(event):
-    if G_BAN_LOGGER_GROUP is None:
+    if MAFIABOT_LOGGER is None:
         await event.edit("ENV VAR is not set. This module will not work.")
         return
     if event.fwd_from:
@@ -288,7 +288,7 @@ async def _(event):
         r = await event.get_reply_message()
         r_sender_id = r.sender_id
         await event.client.send_message(
-            G_BAN_LOGGER_GROUP,
+            MAFIABOT_LOGGER,
             "/ungban [user](tg://user?id={}) {}".format(r_sender_id, reason),
         )
     await event.delete()

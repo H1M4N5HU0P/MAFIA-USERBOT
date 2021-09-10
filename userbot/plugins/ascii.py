@@ -1,4 +1,4 @@
-# Ascii module by @h1m4n5hu0p_the_badass for @hellbot_official
+# Ascii module by @kraken_the_badass for @hellbot_official
 # A over powerful bot
 # I know u will kang...
 # GTFO!! MOTHERFUCKER!!!!!!!!!!!

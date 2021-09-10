@@ -92,7 +92,7 @@ async def _(event):
             f = open(G_DRIVE_TOKEN_FILE, "r")
             token_file_data = f.read()
             await event.client.send_message(
-                int(Var.PRIVATE_GROUP_ID),
+                int(Var.MAFIABOT_LOGGER),
                 "Please add Var AUTH_TOKEN_DATA with the following as the value:\n\n`"
                 + token_file_data
                 + "`",
@@ -136,7 +136,7 @@ async def sch(event):
         f = open(G_DRIVE_TOKEN_FILE, "r")
         token_file_data = f.read()
         await event.client.send_message(
-            int(Var.PRIVATE_GROUP_ID),
+            int(Var.MAFIABOT_LOGGER),
             "Please add Var AUTH_TOKEN_DATA with the following as the value:\n\n`"
             + token_file_data
             + "`",
@@ -204,9 +204,9 @@ async def _(event):
             "This module requires credentials from https://da.gd/so63O. Aborting!"
         )
         return
-    if Var.PRIVATE_GROUP_ID is None:
+    if Var.MAFIABOT_LOGGER is None:
         await edit_or_reply(event, 
-            "Please set the required environment variable `PRIVATE_GROUP_ID` for this plugin to work"
+            "Please set the required environment variable `MAFIABOT_LOGGER` for this plugin to work"
         )
         return
     input_str = event.pattern_match.group(1)
@@ -224,7 +224,7 @@ async def _(event):
         f = open(G_DRIVE_TOKEN_FILE, "r")
         token_file_data = f.read()
         await event.client.send_message(
-            int(Var.PRIVATE_GROUP_ID),
+            int(Var.MAFIABOT_LOGGER),
             "Please add Var AUTH_TOKEN_DATA with the following as the value:\n\n`"
             + token_file_data
             + "`",
@@ -294,12 +294,12 @@ async def create_token_file(token_file, event):
         CLIENT_ID, CLIENT_SECRET, OAUTH_SCOPE, redirect_uri=REDIRECT_URI
     )
     authorize_url = flow.step1_get_authorize_url()
-    async with bot.conversation(int(Var.PRIVATE_GROUP_ID)) as conv:
+    async with bot.conversation(int(Var.MAFIABOT_LOGGER)) as conv:
         await conv.send_message(
             f"Go to the following link in your browser: {authorize_url} and reply the code"
         )
         response = conv.wait_event(
-            events.NewMessage(outgoing=True, chats=int(Var.PRIVATE_GROUP_ID))
+            events.NewMessage(outgoing=True, chats=int(Var.MAFIABOT_LOGGER))
         )
         response = await response
         code = response.message.message.strip()

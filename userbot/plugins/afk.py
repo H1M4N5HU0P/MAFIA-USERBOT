@@ -1,5 +1,5 @@
 # by uniborg...Thanks @spechide
-# Now will be used in MafialBot too....
+# Now will be used in MafiaBot too....
 import asyncio
 import datetime
 from datetime import datetime
@@ -50,7 +50,7 @@ async def set_not_afk(event):
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
+                Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\n"
                 + "🔥__Back alive!__\n**No Longer afk.**\n⏱️ `Was afk for:``"
                 + total_afk_time
@@ -58,7 +58,7 @@ async def set_not_afk(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PRIVATE_GROUP_BOT_API_ID` "
+                "Please set `MAFIABOT_LOGGER` "
                 + "for the proper functioning of afk functionality "
                 + "Ask in @MafiaBot_Chit_Chat to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
@@ -145,7 +145,7 @@ async def _(event):
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
+                Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
                 f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=mafiapic
             )
         except Exception as e:  # pylint:disable=C0103,W0703

@@ -11,7 +11,7 @@ from userbot.cmdhelp import CmdHelp
 async def install(event):
     if event.fwd_from:
         return
-    chat = Var.PLUGIN_CHANNEL
+    chat = Var.MAFIABOT_LOGGER
     documentss = await borg.get_messages(chat, None, filter=InputMessagesFilterDocument)
     total = int(documentss.total)
     total_doxx = range(0, total)
@@ -77,7 +77,7 @@ async def install(event):
             )
 
 CmdHelp("extra_py").add_command(
-  'extdl', None, 'Installs all plugins from the channal which id is in PLUGIN_CHANNEL variable'
+  'extdl', None, 'Installs all plugins from the channal which id is in MAFIABOT_LOGGER variable'
 ).add_command(
   'installall', '<channel/grp username>', 'Installs all the plugins in provided channel / group. (May get floodwait error)'
 ).add()

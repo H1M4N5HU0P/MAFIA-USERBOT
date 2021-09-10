@@ -29,14 +29,14 @@ async def all_groups_id(mafia):
 async def _(event):
     if event.fwd_from:
         return
-    if Config.PRIVATE_GROUP_BOT_API_ID is None:
+    if Config.MAFIABOT_LOGGER is None:
         await edit_or_reply(
             event,
-            "Please set the required environment variable `PRIVATE_GROUP_BOT_API_ID` for this plugin to work",
+            "Please set the required environment variable `MAFIABOT_LOGGER` for this plugin to work",
         )
         return
     try:
-        e = await event.client.get_entity(Config.PRIVATE_GROUP_BOT_API_ID)
+        e = await event.client.get_entity(Config.MAFIABOT_LOGGER)
     except Exception as e:
         await edit_or_reply(event, str(e))
     else:
