@@ -1,15 +1,17 @@
 import asyncio
 import math
 import os
-
+import urllib3
 import heroku3
 import requests
 
+from . import *
 from userbot import CMD_HELP
 from userbot.Config import Config
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from mafiabot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-import urllib3
+from userbot.helpers.extras import delete_mafia, edit_or_reply as eor
+
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # =====================================
@@ -20,10 +22,10 @@ heroku_api = "https://api.heroku.com"
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 
-Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
-heroku_api = "https://api.heroku.com"
 mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
 
+MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+h1m4n5hu0p = bot.uid
 
 @borg.on(
     admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
@@ -177,47 +179,24 @@ async def dyno_usage(dyno):
     )
 
 
-@borg.on(admin_cmd(pattern="logs$", outgoing=True))
+@bot.on(admin_cmd(pattern="logs$", outgoing=True))
 async def _(dyno):
-    if dyno.fwd_from:
-        return
+    if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):  
+        return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit @MafiaBot_Support for help.", link_preview=False)
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
-        app = Heroku.app(HEROKU_APP_NAME)
-        thumb = mafia_logo
-    except:
-        return await dyno.reply(
-            " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku\n\n[Visit Support Group For Help](https://t.me/MafiaBot_Chit_Chat)"
-        )
+        app = Heroku.app(HEROKU_APP_NAME)        
+    except BaseException:
+        return await dyno.reply(f"Make Sure Your Heroku App Name & API Key are filled correct. Visit @MafiaBot_Support for help.", link_preview=False)
+   # event = await eor(dyno, "Downloading Logs...")
     mafia_data = app.get_log()
-    mafia_key = (
-        requests.post("https://nekobin.com/api/documents", json={"content": mafia_data})
-        .json()
-        .get("result")
-        .get("key")
-    )
-    mafia_url = f"⚡ Pasted this logs.txt to [NekoBin](https://nekobin.com/{mafia_key}) && [RAW PAGE](https://nekobin.com/raw/{mafia_key}) ⚡"
-    await dyno.edit("Getting Logs....")
-    with open("logs.txt", "w") as log:
-        log.write(app.get_log())
-    await dyno.edit("Got the logs wait a sec")
-    await dyno.client.send_file(
-        dyno.chat_id,
-        "logs.txt",
-        reply_to=dyno.id,
-        thumb=thumb,
-        caption=mafia_url,
-    )
-
-    await asyncio.sleep(5)
-    await dyno.delete()
-    return os.remove("logs.txt")
-
+    await eor(dyno, mafia_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :** [{MAFIA_NAME}](tg://user?id={h1m4n5hu0p})\n\n🚀** Pasted**  ")
+    
+   
 
 def prettyjson(obj, indent=2, maxlinelength=80):
     """Renders JSON content with indentation and line splits/concatenations to fit maxlinelength.
     Only dicts, lists and basic types are supported"""
-
     items, _ = getsubitems(
         obj,
         itemkey="",
