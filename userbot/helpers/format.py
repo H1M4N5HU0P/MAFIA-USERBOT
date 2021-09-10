@@ -11,6 +11,20 @@ from telethon.utils import add_surrogate
 
 from userbot.helpers.functions import utc_to_local
 
+async def paste_message(text, pastetype="p", extension=None, markdown=True):
+    if markdown:
+        text = md_to_text(text)
+    response = await pastetext(text, pastetype, extension)
+    if "url" in response:
+        return response["url"]
+    return "Error while pasting text to site"
+
+
+def md_to_text(md):
+    html = markdown(md)
+    soup = BeautifulSoup(html, features="html.parser")
+    return soup.get_text()
+
 
 def paste_text(text):
     asciich = ["**", "`", "__"]
