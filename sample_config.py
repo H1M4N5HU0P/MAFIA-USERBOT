@@ -10,6 +10,7 @@ class Var(object):
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
+    ABUSE = os.environ.get("ABUSE", None)
     # Here for later purposes
     SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1212368262").split())
     WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "").split())

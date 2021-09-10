@@ -10,7 +10,7 @@ class Development(Config):
   # the name to display in your alive message.
   # If not filled anything then default value is Mafia User.
   ALIVE_NAME = "Mafia User"
-
+  ABUSE = "OFF"
   # create any PostgreSQL database.
   # I recommend to use elephantsql and paste that link here
   DB_URI = "Your value"
