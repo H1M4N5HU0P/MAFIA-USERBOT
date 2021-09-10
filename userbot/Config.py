@@ -14,7 +14,7 @@ if ENV:
         SUDO_COMMAND_HAND_LER = os.environ.get("SUDO_COMMAND_HAND_LER", r"\.")
 
         # This is required for the plugins involving the file system.
-        TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+        TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/")
         # This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
         IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
         IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
@@ -161,6 +161,7 @@ if ENV:
         EXTRA_MAFIABOT = os.environ.get("EXTRA_MAFIABOT", -1001221881562)
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
         MAFIABOT_LOGGER = int(os.environ.get("MAFIABOT_LOGGER", None))
+        ABUSE = os.environ.get("ABUSE", None)
 else:
     class Config(object):
         DB_URI = None
