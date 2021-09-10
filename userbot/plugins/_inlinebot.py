@@ -30,7 +30,7 @@ from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
 
-mafia_help_pic = Config.HELP_PIC
+mafia_help_pic = Config.HELP_PIC or "https://telegra.ph/file/f6a46c6251bb8a5bea300.mp4"
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
