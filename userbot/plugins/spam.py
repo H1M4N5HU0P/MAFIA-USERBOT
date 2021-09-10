@@ -15,7 +15,7 @@ from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from mafiabot.Config import Config
 
-LOGGER = Config.PLUGIN_CHANNEL
+LOGGER = Config.MAFIABOT_LOGGER
 SUDO_WALA = Config.SUDO_USERS
 
 @bot.on(admin_cmd(pattern="spam (.*)"))

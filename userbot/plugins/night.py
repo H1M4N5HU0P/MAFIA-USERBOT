@@ -32,13 +32,13 @@ async def set_not_night(event):
     if ".night" not in current_message and "yes" in USER_night:  # pylint:disable=E0602
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
+                Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
                 f"Mine Owner has Gone to Sleep (Pure Din Sota hi Rehta He {DEFAULTUSER} )",
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PLUGIN_CHANNEL` "
+                "Please set `MAFIABOT_LOGGER` "
                 + "for the proper functioning of night functionality "
                 + "report in [MafiaBot](t.me/Mafia_Chit_Chat)\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
@@ -75,7 +75,7 @@ async def _(event):
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PLUGIN_CHANNEL, f"My BOss Wants So Sleep"  # pylint:disable=E0602
+                Config.MAFIABOT_LOGGER, f"My BOss Wants So Sleep"  # pylint:disable=E0602
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602

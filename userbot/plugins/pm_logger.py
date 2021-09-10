@@ -21,7 +21,7 @@ logging.basicConfig(
 NO_PM_LOG_USERS = []
 
 BOTLOG = True
-BOTLOG_CHATID = Config.PM_LOGGR_BOT_API_ID
+BOTLOG_CHATID = Config.MAFIABOT_LOGGER
 
 
 @bot.on(admin_cmd(pattern=r"save(?: |$)([\s\S]*)", outgoing=True))
@@ -52,7 +52,7 @@ async def monito_p_m_s(event):
         chat = await event.get_chat()
         if chat.id not in NO_PM_LOG_USERS and chat.id != bot.uid:
             try:
-                e = await bot.get_entity(int(Config.PM_LOGGR_BOT_API_ID))
+                e = await bot.get_entity(int(Config.MAFIABOT_LOGGER))
                 fwd_message = await bot.forward_messages(e, event.message, silent=True)
             except Exception as e:
                 # logger.warn(str(e))
@@ -64,7 +64,7 @@ async def monito_p_m_s(event):
 
 @bot.on(admin_cmd(pattern="elog ?(.*)"))
 async def set_no_log_p_m(event):
-    if Config.PM_LOGGR_BOT_API_ID is not None:
+    if Config.MAFIABOT_LOGGER is not None:
         event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
@@ -77,7 +77,7 @@ async def set_no_log_p_m(event):
 
 @bot.on(admin_cmd(pattern="nlog ?(.*)"))
 async def set_no_log_p_m(event):
-    if Config.PM_LOGGR_BOT_API_ID is not None:
+    if Config.MAFIABOT_LOGGER is not None:
         event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:

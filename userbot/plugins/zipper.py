@@ -141,6 +141,4 @@ CmdHelp ("zipper").add_command(
   "zip", "<reply to media>", "Makes a zip file of replied media"
 ).add_command(
   "unzip", "<reply to a zip file>", "Unzips the replied zip file and sends the files from that zip file"
-).add_command(
-  "compress", "<reply to media>", "Compress the replied media"
 ).add()

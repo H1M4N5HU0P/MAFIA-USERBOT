@@ -9,7 +9,7 @@ from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-lg_id = Config.PM_LOGGR_BOT_API_ID
+lg_id = Config.MAFIABOT_LOGGER
 h1m4n5hu0p = bot.uid
 mafia_mention = "[{MAFIA_NAME}](tg://user?id={h1m4n5hu0p})"
 
@@ -23,8 +23,8 @@ auth_url = r["auth_url"]
 async def _(event):
     if event.fwd_from:
         return
-    if Config.PM_LOGGR_BOT_API_ID is None:
-        await edit_or_reply(event, "You need to setup `PM_LOGGR_BOT_API_ID` to use telegraph...", 7)
+    if Config.MAFIABOT_LOGGER is None:
+        await edit_or_reply(event, "You need to setup `MAFIABOT_LOGGER` to use telegraph...", 7)
         return
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
