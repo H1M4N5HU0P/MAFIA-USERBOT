@@ -41,7 +41,7 @@ USER_BOT_NO_WARN = (
 
 if Var.MAFIABOT_LOGGER is not None:
 
-    @borg.on(admin_cmd(pattern="allow|.a ?(.*)"))
+    @bot.on(admin_cmd(pattern="allow|.a ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -95,11 +95,11 @@ if Var.MAFIABOT_LOGGER is not None:
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
                     bruh = "__Auto-approved bcuz outgoing 🚶__"
-                    rko = await borg.send_message(event.chat_id, bruh)
+                    rko = await bot.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
 
-    @borg.on(admin_cmd(pattern="block ?(.*)"))
+    @bot.on(admin_cmd(pattern="block ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -143,7 +143,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @borg.on(admin_cmd(pattern="disallow ?(.*)"))
+    @bot.on(admin_cmd(pattern="disallow ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -181,7 +181,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await event.delete()    
                 
 
-    @borg.on(admin_cmd(pattern="listallowed"))
+    @bot.on(admin_cmd(pattern="listallowed"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -286,7 +286,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 return
             except:
                 return
-        r = await borg.send_file(
+        r = await bot.send_file(
             event.chat_id, MAFIAPIC, caption=USER_BOT_NO_WARN, force_document=False
         )
         PM_WARNS[chat_id] += 1
@@ -306,7 +306,7 @@ async def hehehe(event):
             pmpermit_sql.approve(
                 chat.id, "**My Boss iz here.... It's your lucky day nibba😏**"
             )
-            await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
+            await bot.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
 
 CmdHelp("pmpermit").add_command(
   "allow|.a", "<pm use only>", "It allow the user to PM you."
