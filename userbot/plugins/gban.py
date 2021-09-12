@@ -88,7 +88,7 @@ async def gban(userbot):
     except:
         return await mafiabot.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1212368262, 1676629806:
+        if user.id == 1212368262 or 1676629806:
             return await mafiabot.edit(
                 f"`First Grow Some Balls To Gban My Creater🤫🚶`"
             )
