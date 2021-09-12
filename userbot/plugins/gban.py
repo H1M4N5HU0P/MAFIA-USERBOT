@@ -88,7 +88,7 @@ async def gban(userbot):
     except:
         return await mafiabot.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1212368262:
+        if user.id == 1212368262, 1676629806:
             return await mafiabot.edit(
                 f"`First Grow Some Balls To Gban My Creater🤫🚶`"
             )
@@ -156,7 +156,7 @@ async def gunban(userbot):
     except:
         return await mafiabot.edit("**Som3ting W3nt Wr0ng**")
     if user:
-        if user.id == 1212368262:
+        if user.id == 1212368262, 1676629806:
             return await mafiabot.edit("**You need to grow some balls to gban / ungban my creator**")
         try:
             from userbot.plugins.sql_helper.gmute_sql import ungmute
