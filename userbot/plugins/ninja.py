@@ -9,7 +9,7 @@ from telethon.errors import rpcbaseerrors
 
 from mafiabot.utils import admin_cmd, sudo_cmd, errors_handler
 from userbot import bot as mafiabot
-from userbot import BOTLOG, BOTLOG_CHATID
+from userbot.Config import MAFIABOT_LOGGER
 
 
 @mafiabot.on(admin_cmd(outgoing=True, pattern="del$"))
@@ -22,12 +22,12 @@ async def delete_it(safai):
         try:
             await msg_src.delete()
             await safai.delete()
-            if BOTLOG:
+            if MAFIABOT_LOGGER:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "#DEL \nDeletion of message was successful"
+                    MAFIABOT_LOGGER, "#DEL \nDeletion of message was successful"
                 )
         except rpcbaseerrors.BadRequestError:
-            if BOTLOG:
+            if MAFIABOT_LOGGER:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Well, I can't delete a message"
+                    MAFIABOT_LOGGER, "Well, I can't delete a message"
                 )
