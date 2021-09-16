@@ -6,7 +6,6 @@ import heroku3
 import requests
 
 from . import *
-from userbot import CMD_HELP
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp

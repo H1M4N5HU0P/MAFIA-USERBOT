@@ -6,7 +6,7 @@
 import asyncio
 from userbot.cmdhelp import CmdHelp
 
-from userbot import *
+from . import *
 from mafiabot.utils import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"

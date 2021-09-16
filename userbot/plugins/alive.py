@@ -5,7 +5,7 @@
 import asyncio
 import random
 from telethon import events, version
-from userbot import ALIVE_NAME, mafiaversion
+from . import *
 from userbot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp

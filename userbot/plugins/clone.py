@@ -11,7 +11,7 @@ from telethon.tl import functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from userbot import ALIVE_NAME, BIO_MSG, CMD_HELP
+from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 

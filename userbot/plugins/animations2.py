@@ -1,7 +1,7 @@
 import asyncio
 from collections import deque
 
-from userbot import *
+from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 

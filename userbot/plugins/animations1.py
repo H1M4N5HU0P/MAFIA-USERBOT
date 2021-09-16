@@ -3,7 +3,7 @@ from collections import deque
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot import *
+from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 

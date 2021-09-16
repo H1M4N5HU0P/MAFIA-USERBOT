@@ -6,7 +6,7 @@
 
 import re
 
-from userbot import bot
+from . import *
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.functions import deEmojify

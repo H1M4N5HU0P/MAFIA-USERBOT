@@ -7,7 +7,7 @@ import math
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
-from userbot import CmdHelp
+from . import *
 from userbot import bot as mafiabot
 
 

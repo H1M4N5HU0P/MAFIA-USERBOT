@@ -1,7 +1,6 @@
 """mafiaBot Help Command"""
 
 from userbot import *
-from userbot import CMD_HELP
 from mafiabot.utils import *
 
 

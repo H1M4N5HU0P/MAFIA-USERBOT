@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import SendMediaRequest
 
 from mafiabot.utils import admin_cmd, edit_or_reply, progress, sudo_cmd
-from userbot import CMD_HELP
+from . import *
 from userbot.helpers.functions import unzip
 from userbot.cmdhelp import CmdHelp
 

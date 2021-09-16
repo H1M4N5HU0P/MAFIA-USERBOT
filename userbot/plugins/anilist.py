@@ -9,7 +9,7 @@ import re
 
 import requests
 
-from userbot import *
+from . import *
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
 

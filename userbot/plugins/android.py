@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from requests import get
 from userbot.cmdhelp import CmdHelp
 
-from userbot import *
+from . import *
 from mafiabot.utils import *
 
 GITHUB = "https://github.com"

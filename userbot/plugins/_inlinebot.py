@@ -25,7 +25,7 @@ from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from userbot import *
+from . import *
 from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config

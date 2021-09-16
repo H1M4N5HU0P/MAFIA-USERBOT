@@ -1,6 +1,6 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, mafiaversion
+from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
 

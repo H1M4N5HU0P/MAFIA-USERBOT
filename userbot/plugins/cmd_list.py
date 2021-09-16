@@ -3,7 +3,7 @@ import io
 
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import bot as mafiabot
-from userbot import ALIVE_NAME
+from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"

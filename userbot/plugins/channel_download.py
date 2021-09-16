@@ -7,7 +7,7 @@ By: @Zero_cool7870
 import os
 import subprocess
 
-from userbot import CMD_HELP
+from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 

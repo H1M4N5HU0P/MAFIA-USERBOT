@@ -9,7 +9,7 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import CMD_HELP
+from . import *
 from userbot.plugins.sql_helper.echo_sql import (
     addecho,
     get_all_echos,

@@ -9,7 +9,7 @@ from datetime import datetime
 
 from pySmartDL import SmartDL
 
-from userbot import ALIVE_NAME, CMD_HELP
+from . import *
 from mafiabot.utils import admin_cmd, humanbytes, progress, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
