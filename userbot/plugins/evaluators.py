@@ -7,9 +7,8 @@ import sys
 import traceback
 
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import *
+from userbot import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
 @bot.on(sudo_cmd(pattern="exec(?: |$|\n)(.*)", command="exec", allow_sudo=True))

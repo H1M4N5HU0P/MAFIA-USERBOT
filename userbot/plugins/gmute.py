@@ -3,7 +3,6 @@ import asyncio
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from telethon import events
-from userbot.Config import Config
 
 
 @bot.on(admin_cmd(pattern=r"gmute ?(\d+)?"))

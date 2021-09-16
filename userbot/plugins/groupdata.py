@@ -19,10 +19,10 @@ from telethon.tl.functions.messages import GetFullChatRequest, GetHistoryRequest
 from telethon.tl.types import ChannelParticipantsAdmins, MessageActionChannelMigrateFrom
 from telethon.utils import get_input_location
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, errors_handler, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="chatinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="chatinfo(?: |$)(.*)", allow_sudo=True))

@@ -8,7 +8,6 @@ from google_images_download import google_images_download
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 
 def progress(current, total):

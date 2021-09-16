@@ -5,13 +5,9 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
-from . import *
+from userbot import ALIVE_NAME, BIO_MSG, CMD_HELP
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
-
-DEFAULTUSER = Config.ALIVE_NAME
-DEFAULTUSERBIO = Config.BIO_MSG
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ"
 DEL_TIME_OUT = 60

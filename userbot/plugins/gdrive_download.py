@@ -7,7 +7,6 @@ import requests
 from telethon import events
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 async def download_file_from_google_drive(id):
     URL = "https://docs.google.com/uc?export=download"

@@ -9,10 +9,10 @@ import re
 
 import requests
 
-from . import *
+from userbot import *
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 async def callAPI(search_str):
     query = """

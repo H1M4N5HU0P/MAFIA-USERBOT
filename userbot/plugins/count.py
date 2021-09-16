@@ -4,10 +4,9 @@ from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="stats$"))
 @bot.on(sudo_cmd(pattern="stats$", allow_sudo=True))

@@ -12,10 +12,9 @@ import requests
 from bs4 import BeautifulSoup
 from humanize import naturalsize
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"direct(?: |$)([\s\S]*)"))
 @bot.on(sudo_cmd(allow_sudo=True, pattern=r"direct(?: |$)([\s\S]*)"))

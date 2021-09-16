@@ -13,7 +13,6 @@ from github import Github
 
 from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 GIT_TEMP_DIR = "./userbot/temp/"
 

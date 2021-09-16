@@ -17,10 +17,9 @@ import asyncio
 
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @borg.on(admin_cmd(pattern="fake ?(.*)"))
 async def _(event):

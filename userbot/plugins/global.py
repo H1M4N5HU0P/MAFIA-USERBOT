@@ -18,7 +18,6 @@ from mafiabot.utils import register, errors_handler
 from mafiabot.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)

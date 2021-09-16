@@ -12,9 +12,8 @@ from bs4 import BeautifulSoup
 from requests import get
 from userbot.cmdhelp import CmdHelp
 
-from . import *
+from userbot import *
 from mafiabot.utils import *
-from userbot.Config import Config
 
 GITHUB = "https://github.com"
 DEVICES_DATA = (

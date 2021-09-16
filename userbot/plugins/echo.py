@@ -9,7 +9,7 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from . import *
+from userbot import CMD_HELP
 from userbot.plugins.sql_helper.echo_sql import (
     addecho,
     get_all_echos,
@@ -18,7 +18,7 @@ from userbot.plugins.sql_helper.echo_sql import (
 )
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))

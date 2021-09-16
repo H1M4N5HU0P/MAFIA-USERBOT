@@ -12,7 +12,6 @@ from telethon import events
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 if not os.path.isdir("./SAVED"):
     os.makedirs("./SAVED")

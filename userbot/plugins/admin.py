@@ -29,11 +29,10 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from . import *
+from userbot import *
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 # =================== CONSTANT ===================
 

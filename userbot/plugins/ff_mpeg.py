@@ -6,9 +6,8 @@ import time
 from datetime import datetime
 
 from mafiabot.utils import admin_cmd, sudo_cmd, progress
-from . import *
+from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./downloads/mafiabot.media.ffmpeg"
 

@@ -7,7 +7,6 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from . import *
-from userbot.Config import Config
 
 
 @borg.on(admin_cmd(pattern="xxshort?(.*)"))

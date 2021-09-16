@@ -4,7 +4,7 @@ import io
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="json$", outgoing=True))
 @bot.on(admin_cmd(pattern="json$", allow_sudo=True))

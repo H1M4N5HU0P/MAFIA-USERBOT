@@ -12,10 +12,9 @@ import re
 from telethon import events
 
 from userbot.plugins.sql_helper import blacklist_sql as sql
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 
 @bot.on(events.NewMessage(incoming=True))

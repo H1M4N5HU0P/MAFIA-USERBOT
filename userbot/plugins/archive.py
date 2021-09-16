@@ -17,7 +17,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
-from . import *
+from userbot import CMD_HELP
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, progress
 from userbot.cmdhelp import CmdHelp

@@ -7,9 +7,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from . import *
-from userbot import bot as mafiabot
-from userbot.Config import Config
+from mafiabot import CmdHelp, bot as mafiabot
 
 
 @mafiabot.on(admin_cmd("gencc$"))

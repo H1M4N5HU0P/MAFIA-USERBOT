@@ -11,8 +11,6 @@ import random, re
 from mafiabot.utils import admin_cmd
 import asyncio
 from telethon import events
-from userbot.Config import Config
-from . import *
 
 @borg.on(admin_cmd(pattern="hellbot ?(.*)"))
 async def _(event):

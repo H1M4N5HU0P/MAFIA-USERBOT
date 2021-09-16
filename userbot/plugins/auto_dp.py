@@ -18,10 +18,9 @@ import urllib
 import requests
 from telethon.tl import functions
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 COLLECTION_STRING1 = [
     "awesome-batman-wallpapers",

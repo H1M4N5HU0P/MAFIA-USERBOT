@@ -1,10 +1,10 @@
 import re
 
-from . import *
+from mafiabot import bot
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
-from userbot.helpers.functions import deEmojify
-from userbot.Config import Config
+from mafiabot.cmdhelp import CmdHelp
+from mafiabot.helpers.functions import deEmojify
+
 
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))

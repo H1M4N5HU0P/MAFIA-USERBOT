@@ -1,10 +1,10 @@
 import asyncio
 from collections import deque
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="think$", outgoing=True))
 @bot.on(sudo_cmd(pattern="think$", allow_sudo=True))

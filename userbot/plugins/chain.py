@@ -3,10 +3,10 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from telethon.tl.functions.messages import SaveDraftRequest
 
-from . import *
+from userbot import CMD_HELP
 from mafiabot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="chain$"))
 @bot.on(sudo_cmd(pattern="chain$", allow_sudo=True))

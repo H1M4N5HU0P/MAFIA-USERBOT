@@ -7,9 +7,9 @@ import math
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
-from . import *
+from userbot import CmdHelp
 from userbot import bot as mafiabot
-from userbot.Config import Config
+
 
 @mafiabot.on(admin_cmd(pattern="sin ?(.*)"))
 @mafiabot.on(sudo_cmd(pattern="sin ?(.*)", allow_sudo=True))

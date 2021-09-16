@@ -8,10 +8,9 @@ import urllib
 
 import requests
 
-from . import *
+from userbot import *
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @bot.on(admin_cmd("boobs$"))
 @bot.on(sudo_cmd(pattern="boobs$", allow_sudo=True))

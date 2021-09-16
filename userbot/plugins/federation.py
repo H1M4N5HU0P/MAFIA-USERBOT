@@ -10,9 +10,8 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
 
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import *
+from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 

@@ -11,10 +11,9 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import SendMediaRequest
 
 from mafiabot.utils import admin_cmd, edit_or_reply, progress, sudo_cmd
-from . import *
+from userbot import CMD_HELP
 from userbot.helpers.functions import unzip
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 if not os.path.isdir("./temp"):
     os.makedirs("./temp")

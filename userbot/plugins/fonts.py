@@ -3,7 +3,6 @@
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 normiefont = [
     "a",

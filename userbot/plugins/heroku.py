@@ -6,11 +6,12 @@ import heroku3
 import requests
 
 from . import *
+from userbot import CMD_HELP
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.extras import delete_mafia, edit_or_reply as eor
-from userbot.Config import Config
+
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # =====================================

@@ -1,8 +1,8 @@
 import requests
-from . import *
+from userbot import CmdHelp
 from mafiabot.utils import edit_or_reply, admin_cmd, sudo_cmd
 import os
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="picgen"))
 @bot.on(sudo_cmd(pattern="picgen", allow_sudo=True))

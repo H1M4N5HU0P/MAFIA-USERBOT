@@ -10,7 +10,6 @@ from telethon.tl import types
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper.filter_sql import get_filter, add_filter, remove_filter, get_all_filters, remove_all_filters
-from userbot.Config import Config
 
 
 DELETE_TIMEOUT = 0

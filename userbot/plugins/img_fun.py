@@ -7,9 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 import PIL.ImageOps
 
 from mafiabot.utils import admin_cmd, sudo_cmd
-from . import *
-from userbot.Config import Config
-from userbot import bot as mafiabot
+from userbot import CmdHelp, CMD_HELP, LOGS, bot as mafiabot
 from userbot.helpers.functions import (
     convert_toimage,
     convert_tosticker,
