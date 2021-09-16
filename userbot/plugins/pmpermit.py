@@ -15,7 +15,7 @@ from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 PM_TRUE_FALSE = Config.PM_DATA
-
+CUSTOM_PMPERMIT = Config.CUSTOM_PMPERMIT
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 MAFIAPIC = (
     PMPERMIT_PIC
