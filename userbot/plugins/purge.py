@@ -9,7 +9,7 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from . import *
 from mafiabot.utils import admin_cmd, errors_handler, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
@@ -39,9 +39,9 @@ async def fastpurger(purg):
         "`Fast purge complete!\n`Purged " + str(count) + " messages.",
     )
 
-    if BOTLOG:
+    if MAFIABOT_LOGGER:
         await purg.client.send_message(
-            BOTLOG_CHATID, "Purge of " + str(count) + " messages done successfully."
+            MAFIABOT_LOGGER, "Purge of " + str(count) + " messages done successfully."
         )
     await sleep(2)
     await done.delete()
@@ -67,9 +67,9 @@ async def purgeme(delme):
         delme.chat_id,
         "`Purge complete!` Purged " + str(count) + " messages.",
     )
-    if BOTLOG:
+    if MAFIABOT_LOGGER:
         await delme.client.send_message(
-            BOTLOG_CHATID, "Purge of " + str(count) + " messages done successfully."
+            MAFIABOT_LOGGER, "Purge of " + str(count) + " messages done successfully."
         )
     await sleep(2)
     i = 1
@@ -88,5 +88,5 @@ async def selfdestruct(destroy):
     smsg = await destroy.client.send_message(destroy.chat_id, text)
     await sleep(counter)
     await smsg.delete()
-    if BOTLOG:
-        await destroy.client.send_message(BOTLOG_CHATID, "sd query done successfully")
+    if MAFIABOT_LOGGER:
+        await destroy.client.send_message(MAFIABOT_LOGGER, "sd query done successfully")

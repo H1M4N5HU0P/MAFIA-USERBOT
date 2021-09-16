@@ -9,7 +9,7 @@ from asyncio import sleep
 # credits to kraken, john snow
 import asyncio
 # credits to kraken, john snow
-from userbot import CMD_HELP, ALIVE_NAME
+from . import *
 # credits to kraken, john snow
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to kraken, john snow

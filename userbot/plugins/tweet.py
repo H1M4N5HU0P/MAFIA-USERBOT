@@ -7,7 +7,7 @@
 # no offence. Made for fun purpose only
 # Now in MafiaBot
 
-from userbot import CMD_HELP
+from . import *
 from userbot.helpers.functions import (
     changemymind,
     deEmojify,

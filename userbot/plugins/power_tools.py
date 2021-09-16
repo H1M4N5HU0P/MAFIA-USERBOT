@@ -13,7 +13,7 @@ from time import sleep
 
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot import HEROKU_APP, bot
+from . import *
 
 @bot.on(admin_cmd(pattern="restart"))
 async def _(event):

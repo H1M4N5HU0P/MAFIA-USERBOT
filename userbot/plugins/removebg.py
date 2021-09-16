@@ -3,7 +3,7 @@ import requests
 import PIL.ImageOps
 from PIL import Image, ImageDraw, ImageFont
 
-from mafiabot import CmdHelp
+from . import *
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 

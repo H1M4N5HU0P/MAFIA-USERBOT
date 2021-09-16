@@ -1,7 +1,7 @@
 import asyncio
 from datetime import datetime
 
-from .. import ALIVE_NAME, CMD_HELP
+from . import *
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from ..cmdhelp import CmdHelp
 

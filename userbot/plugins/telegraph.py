@@ -4,14 +4,15 @@ import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from userbot import ALIVE_NAME
+from . import *
+from userbot.helpers.extras import delete_mafia as eod
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-lg_id = Config.MAFIABOT_LOGGER
 h1m4n5hu0p = bot.uid
 mafia_mention = "[{MAFIA_NAME}](tg://user?id={h1m4n5hu0p})"
+lg_id = Config.MAFIABOT_LOGGER
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)

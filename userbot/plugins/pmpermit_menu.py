@@ -9,7 +9,7 @@ import asyncio
 from telethon import functions
 
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME
+from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 PREV_REPLY_MESSAGE = {}

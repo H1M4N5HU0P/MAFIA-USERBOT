@@ -9,7 +9,7 @@ from asyncio import sleep
 
 from telethon import events
 
-from userbot import BOTLOG, BOTLOG_CHATID, bot
+from . import *
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, register
 from userbot.cmdhelp import CmdHelp

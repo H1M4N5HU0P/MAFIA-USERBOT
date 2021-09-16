@@ -7,7 +7,7 @@ import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from userbot import ALIVE_NAME
+from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 

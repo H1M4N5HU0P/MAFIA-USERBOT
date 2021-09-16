@@ -20,7 +20,7 @@ import os
 from telegraph import exceptions, upload_file
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import CMD_HELP
+from . import *
 from userbot.helpers.functions import (
     convert_toimage,
     deEmojify,

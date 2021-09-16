@@ -1,12 +1,10 @@
 import asyncio
-
+import re
 import telethon.utils
 from telethon import events
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from uniborg.util import re
-
-
+from . import *
 async def get_target_message(event):
     if event.is_reply and (await event.get_reply_message()).sender_id == borg.uid:
         return await event.get_reply_message()

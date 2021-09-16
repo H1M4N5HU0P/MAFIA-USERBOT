@@ -1,8 +1,8 @@
 import asyncio
 import random
 from asyncio import sleep
-
-from mafiabot import CmdHelp, bot as mafiabot, ALIVE_NAME
+from . import *
+from userbot import bot as mafiabot
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"

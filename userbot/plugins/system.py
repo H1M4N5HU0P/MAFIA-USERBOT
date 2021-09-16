@@ -1,6 +1,6 @@
 import asyncio
 
-from userbot import CMD_HELP
+from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
