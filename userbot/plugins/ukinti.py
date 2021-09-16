@@ -14,7 +14,7 @@ from telethon.tl.types import (
 )
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern=r"unbanall ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))

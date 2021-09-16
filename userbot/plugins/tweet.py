@@ -7,7 +7,7 @@
 # no offence. Made for fun purpose only
 # Now in MafiaBot
 
-from . import *
+from userbot import CMD_HELP
 from userbot.helpers.functions import (
     changemymind,
     deEmojify,
@@ -23,7 +23,7 @@ from userbot.helpers.functions import (
 )
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))

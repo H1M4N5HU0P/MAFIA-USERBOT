@@ -11,7 +11,7 @@ import cfscrape  # https://github.com/Anorov/cloudflare-scrape
 
 from userbot.cmdhelp import CmdHelp
 from mafiabot.utils import humanbytes, admin_cmd
-from userbot.Config import Config
+
 
 def dogbin(magnets):
     counter = 0

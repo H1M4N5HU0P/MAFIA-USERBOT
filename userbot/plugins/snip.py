@@ -3,7 +3,7 @@ from telethon.tl import types
 from userbot.plugins.sql_helper.snips_sql import get_snips, add_snip, remove_snip, get_all_snips
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1

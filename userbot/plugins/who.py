@@ -4,7 +4,6 @@ from telethon import events, utils
 from telethon.tl import types
 from userbot.cmdhelp import CmdHelp
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.Config import Config
 
 def get_who_string(who):
     who_string = html.escape(utils.get_display_name(who))

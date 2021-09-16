@@ -1,10 +1,9 @@
 import asyncio
 from datetime import datetime
 
-from . import *
+from .. import ALIVE_NAME, CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from ..cmdhelp import CmdHelp
-from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 h1m4n5hu0p = borg.uid

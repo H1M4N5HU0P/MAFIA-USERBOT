@@ -10,7 +10,6 @@ from PIL import Image, ImageDraw, ImageFont
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from var import Var
-from userbot.Config import Config
 
 # how a lazy guy ports.
 client = borg

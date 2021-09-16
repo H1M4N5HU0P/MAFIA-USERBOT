@@ -1,6 +1,6 @@
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern=r"shout", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"shout", allow_sudo=True))

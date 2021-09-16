@@ -7,11 +7,9 @@ import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from . import *
+from userbot import ALIVE_NAME
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
-
 
 global USER_night  # pylint:disable=E0602
 global night_time  # pylint:disable=E0602

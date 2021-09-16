@@ -4,8 +4,6 @@ import asyncio
 import random
 
 from . import *
-from userbot.Config import Config
-
 NUMBER = ["0", "1"]
 
 RAIDHU = [

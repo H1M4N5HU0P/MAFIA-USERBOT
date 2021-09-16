@@ -4,7 +4,7 @@
 
 from mafiabot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="resend"))
 @bot.on(sudo_cmd(pattern="resend", allow_sudo=True))

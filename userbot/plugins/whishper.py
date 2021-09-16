@@ -2,7 +2,7 @@
 
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="wspr ?(.*)"))
 @bot.on(sudo_cmd(pattern="wspr ?(.*)", allow_sudo=True))

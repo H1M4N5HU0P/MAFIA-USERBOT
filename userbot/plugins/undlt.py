@@ -2,7 +2,7 @@ import asyncio
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="undlt"))
 @bot.on(sudo_cmd(pattern="undlt", allow_sudo=True))

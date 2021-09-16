@@ -9,19 +9,17 @@ from asyncio import sleep
 # credits to kraken, john snow
 import asyncio
 # credits to kraken, john snow
-from . import *
+from userbot import CMD_HELP, ALIVE_NAME
 # credits to kraken, john snow
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to kraken, john snow
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 # credits to kraken, john snow
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 # credits to kraken, john snow
 h1m4n5hu0p = bot.uid
 # credits to kraken, john snow
 # credits to kraken, john snow
-
 @bot.on(admin_cmd(pattern="hny$", outgoing=True))
 @bot.on(sudo_cmd(pattern="hny$", allow_sudo=True))
 async def _(event):

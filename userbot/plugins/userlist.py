@@ -4,7 +4,6 @@ from telethon import events
 from telethon.errors.rpcerrorlist import MessageTooLongError
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern=r"userlist ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"userlist ?(.*)", allow_sudo=True))

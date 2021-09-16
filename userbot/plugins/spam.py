@@ -13,7 +13,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+from mafiabot.Config import Config
 
 LOGGER = Config.MAFIABOT_LOGGER
 SUDO_WALA = Config.SUDO_USERS

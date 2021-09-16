@@ -14,7 +14,6 @@ from telethon.utils import get_input_location
 from .. import LOGS, TEMP_DOWNLOAD_DIRECTORY
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #

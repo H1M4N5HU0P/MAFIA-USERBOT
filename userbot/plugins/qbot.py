@@ -2,10 +2,10 @@ import asyncio
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from . import *
+from userbot import bot
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern=r"ss(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"ss(?: |$)(.*)", allow_sudo=True))

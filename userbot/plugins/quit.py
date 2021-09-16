@@ -6,7 +6,7 @@ import time
 from telethon.tl.functions.channels import LeaveChannelRequest
 
 from mafiabot.utils import admin_cmd
-from userbot.Config import Config
+
 
 @borg.on(admin_cmd("kickme", outgoing=True))
 async def leave(e):

@@ -6,11 +6,10 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
 
-from . import *
+from userbot import bot
 from userbot.helpers.functions import deEmojify
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
 
 # RegEx by https://t.me/c/1220993104/50065
 

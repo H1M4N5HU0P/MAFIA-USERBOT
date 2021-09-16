@@ -7,7 +7,7 @@ import re
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @borg.on(admin_cmd(pattern="scramble(\s+[\S\s]+|$)"))
 async def scramble_message(e):

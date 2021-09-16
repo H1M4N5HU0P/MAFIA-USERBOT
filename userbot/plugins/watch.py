@@ -9,7 +9,7 @@ from justwatch import JustWatch
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 def get_stream_data(query):
     stream_data = {}

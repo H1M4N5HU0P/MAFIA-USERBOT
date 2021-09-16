@@ -11,7 +11,7 @@ from telethon.tl.types import MessageEntityPre
 from telethon.utils import add_surrogate
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 PRINTABLE_SET = set(bytes(string.printable, "ascii"))
 STR_LEN_MAX = 256

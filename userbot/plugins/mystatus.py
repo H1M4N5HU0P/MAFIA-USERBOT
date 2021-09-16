@@ -4,7 +4,7 @@ import urllib
 from telethon.tl import functions
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 OFFLINE_TAG = "[•OFFLINE•]"
 ONLINE_TAG = "[•ONLINE•]"

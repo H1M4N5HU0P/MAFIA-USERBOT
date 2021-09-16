@@ -3,7 +3,7 @@ import asyncio
 import time
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="webup ?(.+?|) (?:--)(anonfiles|transfer|filebin|anonymousfiles|megaupload|bayfiles)"
 ))

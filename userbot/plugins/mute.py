@@ -5,7 +5,7 @@ import asyncio
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="mute ?(\d+)?", outgoing=True))
 @bot.on(sudo_cmd(pattern="mute ?(\d+)?", allow_sudo=True))
