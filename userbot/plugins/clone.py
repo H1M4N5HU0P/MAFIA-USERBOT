@@ -14,6 +14,7 @@ from telethon.tl.types import MessageEntityMentionName
 from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 

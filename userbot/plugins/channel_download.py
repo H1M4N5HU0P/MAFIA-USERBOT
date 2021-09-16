@@ -10,6 +10,7 @@ import subprocess
 from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 @borg.on(admin_cmd(pattern=r"getc"))
 async def get_media(event):

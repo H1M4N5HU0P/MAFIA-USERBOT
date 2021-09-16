@@ -7,6 +7,8 @@ from telethon.tl import types
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from mafiabot import CmdHelp
+from userbot.Config import Config
+
 
 @bot.on(admin_cmd(pattern="gps ?(.*)"))
 @bot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))

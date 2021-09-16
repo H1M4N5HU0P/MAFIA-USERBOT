@@ -5,6 +5,7 @@
 import os
 import shutil
 
+from . import *
 from userbot.google_imgs import googleimagesdownload
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.Config import Config

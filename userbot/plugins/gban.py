@@ -9,6 +9,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon.events import ChatAction
+from userbot.Config import Config
 
 HIMANSHU = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 papa = borg.uid

@@ -8,6 +8,7 @@ import PIL.ImageOps
 
 from mafiabot.utils import admin_cmd, sudo_cmd
 from . import *
+from userbot.Config import Config
 from userbot import bot as mafiabot
 from userbot.helpers.functions import (
     convert_toimage,

@@ -3,6 +3,7 @@ import pyfiglet
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))

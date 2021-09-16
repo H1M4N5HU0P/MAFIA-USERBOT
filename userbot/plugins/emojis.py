@@ -8,6 +8,7 @@ import asyncio
 
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="emoji (.*)"))
 async def _(event):

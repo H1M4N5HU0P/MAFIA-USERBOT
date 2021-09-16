@@ -9,7 +9,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="info ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="info ?(.*)", allow_sudo=True))

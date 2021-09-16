@@ -11,6 +11,7 @@ from telethon.tl.types import ChatAdminRights
 
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="gcast ?(.*)"))
 async def gcast(event):

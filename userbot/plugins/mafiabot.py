@@ -3,6 +3,7 @@ import time
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
+from userbot.Config import Config
 
 async def reply_id(event):
     reply_to_id = None

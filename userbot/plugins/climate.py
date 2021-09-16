@@ -18,6 +18,7 @@ from pytz import timezone as tz
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, errors_handler, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING

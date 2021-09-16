@@ -1,7 +1,8 @@
 """mafiaBot Help Command"""
 
-from userbot import *
+from . import *
 from mafiabot.utils import *
+from userbot.Config import Config
 
 
 @bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))

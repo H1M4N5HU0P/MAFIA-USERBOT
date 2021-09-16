@@ -6,6 +6,7 @@ from telethon.tl.types import ChatBannedRights
 from userbot.plugins.sql_helper import antiflood_sql as sql
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 CHAT_FLOOD = sql.__load_flood_settings()
 # warn mode for anti flood

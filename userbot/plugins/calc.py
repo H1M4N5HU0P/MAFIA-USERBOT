@@ -6,6 +6,7 @@ import traceback
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 
 @bot.on(admin_cmd(pattern="calc (.*)"))

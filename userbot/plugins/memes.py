@@ -18,6 +18,7 @@ from telethon.tl.types import MessageEntityMentionName
 
 from userbot.cmdhelp import CmdHelp
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from userbot.Config import Config
 
 # ================= CONSTANT =================
 

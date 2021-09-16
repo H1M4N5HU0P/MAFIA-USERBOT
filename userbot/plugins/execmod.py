@@ -11,6 +11,7 @@ from asyncio.subprocess import PIPE as asyncPIPE
 
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 if not os.path.isdir("./SAVED"):
     os.makedirs("./SAVED")
