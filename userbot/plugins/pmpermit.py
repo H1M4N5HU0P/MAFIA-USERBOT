@@ -15,7 +15,7 @@ from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 PM_TRUE_FALSE = Config.PM_DATA
-CUSTOM_PMPERMIT = Config.CUSTOM_PMPERMIT
+
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 MAFIAPIC = (
     PMPERMIT_PIC
@@ -25,17 +25,13 @@ MAFIAPIC = (
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 myid = bot.uid
-h1m4n5hu0p = (
-    str(CUSTOM_PMPERMIT)
-    if CUSTOM_PMPERMIT
-    else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
-)
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's MafiaBot.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
     "Hello, This is **MafiaBot Ultra Private Security Protocol⚠️**.\n"
-    f"This is my master {DEFAULTUSER}'s Inbox\n"
-    f"\n**{h1m4n5hu0p}**\n\n"
+    f"This is my master {DEFAULTUSER}'s Inbox\n\n"
+    f"**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME**\n\n"
     "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
 )
 
