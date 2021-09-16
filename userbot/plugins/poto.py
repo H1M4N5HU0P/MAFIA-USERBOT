@@ -7,6 +7,7 @@ import logging
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 name = "Profile Photos"
 

@@ -5,7 +5,7 @@ import asyncio
 from . import *
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot import bot as mafiabot
-
+from userbot.Config import Config
 
 @mafiabot.on(admin_cmd(pattern=r"unpack", outgoing=True))
 @mafiabot.on(sudo_cmd(pattern=r"unpack"))

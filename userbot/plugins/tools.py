@@ -16,6 +16,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 #==================MafiaBot==================
 

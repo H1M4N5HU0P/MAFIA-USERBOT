@@ -8,7 +8,7 @@ from datetime import datetime
 
 from mafiabot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="tomp3 (.*)"))
 @bot.on(sudo_cmd(pattern="tomp3 (.*)"))

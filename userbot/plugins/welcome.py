@@ -9,7 +9,7 @@ from userbot.plugins.sql_helper.welcome_sql import (
 )
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 @bot.on(events.ChatAction())  # pylint:disable=E0602
 async def _(event):

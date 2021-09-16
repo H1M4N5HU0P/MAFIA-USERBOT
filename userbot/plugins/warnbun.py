@@ -3,7 +3,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern=r"warn1", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"warn1", allow_sudo=True))

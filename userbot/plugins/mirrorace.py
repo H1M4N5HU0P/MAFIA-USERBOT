@@ -11,7 +11,7 @@ import aiohttp
 import requests
 from mafiabot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="mirrorace ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="mirrorace ?(.*)", allow_sudo=True))

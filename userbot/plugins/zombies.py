@@ -29,6 +29,7 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 from telethon.utils import get_input_location
+from userbot.Config import Config
 
 from . import *
 

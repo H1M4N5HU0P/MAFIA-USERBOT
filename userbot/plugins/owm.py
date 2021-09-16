@@ -18,7 +18,7 @@ from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
 from userbot.events import errors_handler
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 # ===== CONSTANT =====
 DEFCITY = "Delhi"

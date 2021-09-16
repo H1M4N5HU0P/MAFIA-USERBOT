@@ -12,7 +12,7 @@ from gtts import gTTS
 from . import *
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="voice (.*)"))
 @bot.on(sudo_cmd(pattern="voice (.*)", allow_sudo=True))

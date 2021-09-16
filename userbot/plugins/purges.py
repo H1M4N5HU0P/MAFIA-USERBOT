@@ -4,7 +4,11 @@ import telethon.utils
 from telethon import events
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+
 from . import *
+from userbot.Config import Config
+
+
 async def get_target_message(event):
     if event.is_reply and (await event.get_reply_message()).sender_id == borg.uid:
         return await event.get_reply_message()

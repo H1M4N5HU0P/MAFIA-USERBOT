@@ -10,6 +10,8 @@ from telethon.tl import functions, types
 from . import *
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+
 
 global USER_night  # pylint:disable=E0602
 global night_time  # pylint:disable=E0602

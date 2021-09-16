@@ -3,6 +3,7 @@ from random import choice
 import requests
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 LOVESTR = [
     "The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart.",

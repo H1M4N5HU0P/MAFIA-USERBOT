@@ -8,6 +8,7 @@ from googletrans import Translator
 
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 @bot.on(admin_cmd(pattern="trt ?(.*)"))
 @bot.on(sudo_cmd(pattern="trt ?(.*)", allow_sudo=True))

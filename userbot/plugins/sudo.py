@@ -5,6 +5,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from . import *
 from mafiabot.utils import delete_mafia as eod
 from mafiabot.utils import edit_or_reply as eor
+from userbot.Config import Config
 
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"

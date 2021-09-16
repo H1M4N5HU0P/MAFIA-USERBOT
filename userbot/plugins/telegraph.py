@@ -8,6 +8,7 @@ from . import *
 from userbot.helpers.extras import delete_mafia as eod
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 
 MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 h1m4n5hu0p = bot.uid
