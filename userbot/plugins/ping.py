@@ -17,10 +17,10 @@ MAFIA_IMG = Config.ALIVE_PIC
 async def _(event):
     if event.fwd_from:
         return
-    start = datetime.now()
+    start = datetime.datetime.now()
     animation_interval = 0.2
     animation_ttl = range(0, 26)
-    await edit_or_reply(event, "ping....")
+    await edit_or_reply(event, "__**❝❄ᑭ♨ɳց…!❄❞__**")
     animation_chars = [
         "⬛⬛⬛⬛⬛⬛⬛⬛⬛",
         "⬛⬛⬛⬛⬛⬛⬛⬛⬛ \n⬛‎📶‎📶‎📶‎📶‎📶‎📶‎📶⬛",
@@ -52,7 +52,7 @@ async def _(event):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 26])
-    end = datetime.now()
+    end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await edit_or_reply(event, 
         "‎‎‎‎‎‎‎‎‎⬛⬛⬛⬛⬛⬛⬛⬛⬛\n⬛📶📶📶📶📶📶📶⬛\n⬛⬛⬛⬛📶⬛⬛📶⬛\n⬛⬛⬛⬛📶⬛⬛📶⬛\n⬛⬛⬛⬛📶⬛⬛📶⬛\n⬛⬛⬛⬛⬛📶📶⬛⬛\n⬛⬛⬛⬛⬛⬛⬛⬛⬛\n⬛⬛📶📶📶📶📶⬛⬛\n⬛📶⬛⬛⬛⬛⬛📶⬛\n⬛📶⬛⬛⬛⬛⬛📶⬛\n⬛📶⬛⬛⬛⬛⬛📶⬛\n⬛⬛📶📶📶📶📶⬛⬛\n⬛⬛⬛⬛⬛⬛⬛⬛⬛\n⬛📶📶📶📶📶📶📶⬛\n⬛⬛⬛⬛⬛⬛📶⬛⬛\n⬛⬛⬛⬛⬛📶⬛⬛⬛\n⬛⬛⬛⬛📶⬛⬛⬛⬛\n⬛📶📶📶📶📶📶📶⬛\n⬛⬛⬛⬛⬛⬛⬛⬛⬛\n⬛⬛📶📶📶📶📶⬛⬛\n⬛📶⬛⬛⬛⬛⬛📶⬛\n⬛📶⬛⬛⬛⬛⬛📶⬛\n⬛📶⬛📶⬛⬛⬛📶⬛\n⬛⬛📶📶⬛⬛📶⬛⬛\n⬛⬛⬛⬛⬛⬛⬛⬛⬛\n⬛📶⬛📶📶📶📶📶⬛\n⬛⬛⬛⬛⬛⬛⬛⬛⬛ \n‎‎‎‎‎‎‎‎‎ \n \n My 🇵 🇮 🇳 🇬  Is : {} ms".format(
@@ -66,12 +66,12 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    start = datetime.now()
-    event = await edit_or_reply(event, "__**(❛ ᑭσɳց ❜!__**")
-    end = datetime.now()
+    start = datetime.datetime.now()
+    event = await edit_or_reply(event, "__**❝❄ᑭ♨ɳց…!❄❞__**")
+    end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     if MAFIA_IMG:
-        mafia_caption = f"__**꧁ Pong! ꧂__**\n\n   ⚘ {ms}\n   ⚘ __**My**__ __**Master**__ [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+        mafia_caption = f"__**〘 ♕ ᑭσɳց! ♕ 〙__**\n\n   ⚘ {ms}\n   ⚘ __**𝙼𝚢**__ __**𝙼𝚊𝚜𝚝𝚎𝚛**__⟿[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
         await event.client.send_file(
             event.chat_id, MAFIA_IMG, caption=mafia_caption
         )
@@ -83,3 +83,4 @@ CmdHelp("ping").add_command(
 ).add_command(
   "hbping", None, "Shows you the ping speed of server with an animation"
 ).add()
+

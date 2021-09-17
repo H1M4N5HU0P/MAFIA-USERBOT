@@ -1,4 +1,4 @@
-# by uniborg...Thanks @spechide
+# by unibot...Thanks @spechide
 # Now will be used in MafiaBot too....
 import asyncio
 import datetime
@@ -28,7 +28,7 @@ last_afk_message = {}
 afk_start = {}
 
 
-@borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+@bot.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
 async def set_not_afk(event):
     if event.fwd_from:
         return
@@ -37,27 +37,27 @@ async def set_not_afk(event):
     global last_afk_message  # pylint:disable=E0602
     global afk_start
     global afk_end
-    came_back = datetime.now()
+    came_back = datetime.datetime.now()
     afk_end = came_back.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        mafiabot = await borg.send_message(
+        mafiabot = await bot.send_message(
             event.chat_id,
             "🔥__Back alive!__\n**No Longer afk.**\n⏱️ `Was afk for:``"
             + total_afk_time
             + "`", file=mafiapic
         )
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await bot.send_message(  # pylint:disable=E0602
                 Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\n"
                 + "🔥__Back alive!__\n**No Longer afk.**\n⏱️ `Was afk for:``"
                 + total_afk_time
             )
         except Exception as e:  # pylint:disable=C0103,W0703
-            await borg.send_message(  # pylint:disable=E0602
+            await bot.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `MAFIABOT_LOGGER` "
                 + "for the proper functioning of afk functionality "
@@ -71,7 +71,7 @@ async def set_not_afk(event):
         afk_time = None  # pylint:disable=E0602
 
 
-@borg.on(
+@bot.on(
     events.NewMessage(  # pylint:disable=E0602
         incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
     )
@@ -84,7 +84,7 @@ async def on_afk(event):
     global last_afk_message  # pylint:disable=E0602
     global afk_start
     global afk_end
-    cum_back = datetime.now()
+    cum_back = datetime.datetime.now()
     afk_end = cum_back.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
@@ -109,7 +109,7 @@ async def on_afk(event):
         last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-@borg.on(admin_cmd(pattern=r"afk (.*)", outgoing=True))  # pylint:disable=E0602
+@bot.on(admin_cmd(pattern=r"afk (.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -125,27 +125,27 @@ async def _(event):
     afk_time = None
     last_afk_message = {}
     afk_end = {}
-    start_1 = datetime.now()
+    start_1 = datetime.datetime.now()
     afk_start = start_1.replace(microsecond=0)
     reason = event.pattern_match.group(1)
     mafiapic = await event.client.download_media(h1m4n5hu0p)
     if not USER_AFK:  # pylint:disable=E0602
-        last_seen_status = await borg(  # pylint:disable=E0602
+        last_seen_status = await bot(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
         )
         if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason} {mafiapic}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(
+            await bot.send_message(
                 event.chat_id, f"__**I'm going afk🚶**__ \n⚜️ Because `{reason}`", file=mafiapic
             )
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**🚶", file=mafiapic)
+            await bot.send_message(event.chat_id, f"**I am Going afk!**🚶", file=mafiapic)
         await asyncio.sleep(0.001)
         await event.delete()
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await bot.send_message(  # pylint:disable=E0602
                 Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
                 f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=mafiapic
             )
