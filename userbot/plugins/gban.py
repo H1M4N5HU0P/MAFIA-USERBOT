@@ -1,7 +1,10 @@
-from userbot import bot, CMD_HELP, ALIVE_NAME
+from userbot import bot, CMD_HELP
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+from . import *
+
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest

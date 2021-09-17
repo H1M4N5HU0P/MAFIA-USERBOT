@@ -14,6 +14,8 @@ from userbot.cmdhelp import CmdHelp
 
 from userbot import *
 from mafiabot.utils import *
+from userbot.Config import Config
+from . import *
 
 GITHUB = "https://github.com"
 DEVICES_DATA = (

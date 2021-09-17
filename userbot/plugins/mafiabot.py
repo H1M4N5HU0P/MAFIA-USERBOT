@@ -1,8 +1,10 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, mafiaversion
+from userbot import StartTime, mafiaversion
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
+from userbot.Config import Config
+from . import *
 
 async def reply_id(event):
     reply_to_id = None

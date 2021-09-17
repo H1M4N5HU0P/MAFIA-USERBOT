@@ -8,7 +8,8 @@ import urllib
 
 import requests
 
-from userbot import *
+from userbot.Config import Config
+from . import *
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
 

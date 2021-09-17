@@ -6,6 +6,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 from userbot import *
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 

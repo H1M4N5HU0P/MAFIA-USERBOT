@@ -8,7 +8,9 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocument
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from userbot.Config import Config
 from . import *
+
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 mafia = borg.uid

@@ -12,7 +12,8 @@ import requests
 from userbot import *
 from mafiabot.utils import *
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
+from . import *
 
 async def callAPI(search_str):
     query = """
