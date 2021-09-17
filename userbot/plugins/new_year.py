@@ -9,11 +9,13 @@ from asyncio import sleep
 # credits to kraken, john snow
 import asyncio
 # credits to kraken, john snow
-from userbot import CMD_HELP, ALIVE_NAME
+from userbot import CMD_HELP
 # credits to kraken, john snow
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to kraken, john snow
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+from . import *
 # credits to kraken, john snow
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 # credits to kraken, john snow

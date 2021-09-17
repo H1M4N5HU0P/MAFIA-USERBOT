@@ -14,6 +14,8 @@ import magic
 import requests
 from mafiabot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+from . import *
 
 
 @bot.on(admin_cmd(pattern="verystream ?(.*)", outgoing=True))

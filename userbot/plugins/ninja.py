@@ -11,7 +11,7 @@ from mafiabot.utils import admin_cmd, sudo_cmd, errors_handler
 from userbot import bot as mafiabot
 from mafiabot.Config import Config
 
-LOGGER = Config.LOGGER
+LOGGER = Config.MAFIABOT_LOGGER
 
 @mafiabot.on(admin_cmd(outgoing=True, pattern="del$"))
 @mafiabot.on(sudo_cmd(allow_sudo=True, pattern="del$"))

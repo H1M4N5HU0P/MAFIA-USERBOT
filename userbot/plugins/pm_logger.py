@@ -9,7 +9,7 @@ from asyncio import sleep
 
 from telethon import events
 
-from userbot import BOTLOG, BOTLOG_CHATID, bot
+from userbot import bot
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd, register
 from userbot.cmdhelp import CmdHelp
@@ -20,21 +20,21 @@ logging.basicConfig(
 
 NO_PM_LOG_USERS = []
 
-BOTLOG = True
-BOTLOG_CHATID = Config.MAFIABOT_LOGGER
+MAFIABOT_LOGGER = True
+MAFIABOT_LOGGER = Config.MAFIABOT_LOGGER
 
 
 @bot.on(admin_cmd(pattern=r"save(?: |$)([\s\S]*)", outgoing=True))
 async def log(log_text):
     """ For .log command, forwards a message or the command argument to the bot logs group """
-    if BOTLOG:
+    if MAFIABOT_LOGGER:
         if log_text.reply_to_msg_id:
             reply_msg = await log_text.get_reply_message()
-            await reply_msg.forward_to(BOTLOG_CHATID)
+            await reply_msg.forward_to(MAFIABOT_LOGGER)
         elif log_text.pattern_match.group(1):
             user = f"#LOG / Chat ID: {log_text.chat_id}\n\n"
             textx = user + log_text.pattern_match.group(1)
-            await bot.send_message(BOTLOG_CHATID, textx)
+            await bot.send_message(MAFIABOT_LOGGER, textx)
         else:
             await log_text.edit("`What am I supposed to save?`")
             return

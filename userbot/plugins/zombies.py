@@ -29,8 +29,8 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 from telethon.utils import get_input_location
-
-from userbot import BOTLOG, BOTLOG_CHATID
+from userbot.Config import Config
+from . import *
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
@@ -116,9 +116,9 @@ async def rm_deletedacc(show):
         del_status = f"Cleaned **{del_u}** deleted account(s) \
         \n**{del_a}** deleted admin accounts are not removed"
     await edit_or_reply(event, del_status)
-    if BOTLOG:
+    if MAFIABOT_LOGGER:
         await show.client.send_message(
-            BOTLOG_CHATID,
+            MAFIABOT_LOGGER,
             f"#CLEANUP\
             \n{del_status}\
             \nCHAT: {show.chat.title}(`{show.chat_id}`)",

@@ -11,9 +11,11 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
-from .. import LOGS, TEMP_DOWNLOAD_DIRECTORY
+from .. import LOGS
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+from . import *
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #

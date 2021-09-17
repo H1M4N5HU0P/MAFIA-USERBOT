@@ -4,7 +4,9 @@ import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from userbot import ALIVE_NAME
+from userbot.Config import Config
+from . import *
+
 from userbot.helpers.extras import delete_mafia as eod
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
