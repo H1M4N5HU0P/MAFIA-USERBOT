@@ -1,4 +1,4 @@
-from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from userbot.plugins.sql_helper.gmute_sql import is_gmuted, gmute, ungmute
 import asyncio
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
@@ -32,10 +32,10 @@ async def blowjob(event):
         return await edit_or_reply(event, "I need a user to gmute. Please reply or get his uid")
     chat_id = event.chat_id
     chat = await event.get_chat()
-    if is_muted(userid, "gmute"):
+    if is_gmuted(userid, "gmute"):
         return await edit_or_reply(event, "This retard cant speak. Was already gmutted earlier")
     try:
-        mute(userid, "gmute")
+        gmute(userid, "gmute")
     except Exception as e:
         await edit_or_reply(event, "Error occured!\nError is " + str(e))
     else:
@@ -62,10 +62,10 @@ async def cumshot(event):
     else:
         return await edit_or_reply(event, "Please reply to a user or add them into the command to ungmute them.")
     chat_id = event.chat_id
-    if not is_muted(userid, "gmute"):
+    if not is_gmuted(userid, "gmute"):
         return await edit_or_reply(event, "This user can already speak freely✌️😃")
     try:
-        unmute(userid, "gmute")
+        ungmute(userid, "gmute")
     except Exception as e:
         await edit_or_reply(event, "Error occured!\nError is " + str(e))
     else:
@@ -73,5 +73,5 @@ async def cumshot(event):
         
 @command(incoming=True)
 async def watcher(event):
-    if is_muted(event.sender_id, "gmute"):
+    if is_gmuted(event.sender_id, "gmute"):
         await event.delete()
