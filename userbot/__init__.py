@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import time
 from telethon.sessions import StringSession
@@ -100,6 +101,8 @@ except:
 
     # SQL Database URI
     DB_URI = os.environ.get("DATABASE_URL", None)
+    if DB_URI.startswith("postgres://"):
+        DB_URI = DB_URI.replace("postgres://", "postgresql://", 1)
 
     # OCR API key
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
