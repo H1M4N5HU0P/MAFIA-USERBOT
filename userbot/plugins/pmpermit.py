@@ -9,11 +9,10 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
-from userbot import MAFIA_ID
+from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, MAFIA_ID
+from userbot.Config import Config
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
-from . import *
 
 PM_TRUE_FALSE = Config.PM_DATA
 
@@ -26,9 +25,11 @@ MAFIAPIC = (
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 myid = bot.uid
-
-h1m4n5hu0p = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
-
+h1m4n5hu0p = (
+    str(CUSTOM_PMPERMIT)
+    if CUSTOM_PMPERMIT
+    else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
+)
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's MafiaBot.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
@@ -40,7 +41,7 @@ USER_BOT_NO_WARN = (
 
 if Var.MAFIABOT_LOGGER is not None:
 
-    @bot.on(admin_cmd(pattern="allow|.a ?(.*)"))
+    @bot.on(admin_cmd(pattern="(allow|a|approve)$?.*"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -142,7 +143,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @bot.on(admin_cmd(pattern="disallow ?(.*)"))
+    @bot.on(admin_cmd(pattern="(disallow|da|disapprove)$?.*"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
