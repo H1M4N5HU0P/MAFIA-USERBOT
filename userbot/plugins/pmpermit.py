@@ -41,7 +41,7 @@ USER_BOT_NO_WARN = (
 
 if Var.MAFIABOT_LOGGER is not None:
 
-    @bot.on(admin_cmd(pattern="(allow|a|approve)$?.*"))
+    @bot.on(admin_cmd(pattern="(a|allow|approve)$?.*"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -143,7 +143,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @bot.on(admin_cmd(pattern="(disallow|da|disapprove)$?.*"))
+    @bot.on(admin_cmd(pattern="(da|disallow|disapprove)$?.*"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -181,7 +181,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await event.delete()    
                 
 
-    @bot.on(admin_cmd(pattern="listallowed"))
+    @bot.on(admin_cmd(pattern="(la|listallowed)$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -309,13 +309,13 @@ async def hehehe(event):
             await bot.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
 
 CmdHelp("pmpermit").add_command(
-  "allow|.a", "<pm use only>", "It allow the user to PM you."
+  "a|allow|approve", "<pm use only>", "It allow the user to PM you."
 ).add_command(
-  "disallow|.da", "<pm use only>", "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically"
+  "da|disallow|disapprove", "<pm use only>", "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically"
 ).add_command(
   "block", "<pm use only>", "You know what it does.... Blocks the user"
 ).add_command(
-  "listallowed|.la", None, "Gives you the list of allowed PM's list"
+  "la|listallowed", None, "Gives you the list of allowed PM's list"
 ).add_command(
   "set var PM_DATA", "DISABLE", "Turn off pm protection by your userbot. Your PM will not be protected."
 ).add()
