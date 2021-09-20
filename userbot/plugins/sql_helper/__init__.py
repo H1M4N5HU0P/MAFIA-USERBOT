@@ -8,9 +8,13 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from var import Var
 from userbot.Config import Config
 
-
 def start() -> scoped_session:
-    engine = create_engine(Config.DB_URI)
+    db_url = (
+        Config.DB_URI.replace("postgres://", "postgresql://")
+        if "postgres://" in Config.DB_URI
+        else Config.DB_URI
+    )
+    engine = create_engine(db_url)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
