@@ -41,7 +41,7 @@ USER_BOT_NO_WARN = (
 
 if Var.MAFIABOT_LOGGER is not None:
 
-    @bot.on(admin_cmd(pattern="(a|allow|approve)$?.*"))
+    @bot.on(admin_cmd(pattern="a|.allow|.approve ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -143,7 +143,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @bot.on(admin_cmd(pattern="(da|disallow|disapprove)$?.*"))
+    @bot.on(admin_cmd(pattern="da|.disallow|.disapprove ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -181,7 +181,7 @@ if Var.MAFIABOT_LOGGER is not None:
                 await event.delete()    
                 
 
-    @bot.on(admin_cmd(pattern="(la|listallowed)$"))
+    @bot.on(admin_cmd(pattern="la|.listallowed ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
