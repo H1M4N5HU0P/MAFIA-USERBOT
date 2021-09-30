@@ -1,10 +1,7 @@
-from userbot import bot, CMD_HELP
+from userbot import bot, CMD_HELP, ALIVE_NAME
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.Config import Config
-from . import *
-
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -12,7 +9,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon.events import ChatAction
-
+from userbot.plugins.sql_helper.gban_sql import is_gbanned
 HIMANSHU = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 papa = borg.uid
 
