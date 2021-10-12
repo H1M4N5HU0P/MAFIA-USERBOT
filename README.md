@@ -14,7 +14,7 @@
 # FORK AT YOUR OWN RISK
 
 <details>
-  <summary> • INSTALLING • </summary>
+  <summary> • ⚡INSTALLING⚡ • </summary>
 
 ### The Easy Way
 
@@ -53,7 +53,7 @@ notifications in Update Channel.
 <h1 align="center">⚙️ SET-UP ⚙️</h1>
 
 <details>
-  <summary> <h2>Generate String Session</h2> </summary>
+  <summary> • 🌟GENERATE STRING SESSION🌟 • </summary>
 
 - Termux
     - Clone `git clone https://github.com/H1M4N5HU0P/MAFIA-BOT.git`
