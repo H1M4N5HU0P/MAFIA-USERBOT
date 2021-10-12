@@ -18,7 +18,7 @@
 
 ### The Easy Way
 
-<h4>⚜️ DEPLOY TO HEROKU ⚜️</h4>
+<h4>⚜️DEPLOY TO HEROKU⚜️</h4>
 
 <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FH1M4N5HU0P%2FMAFIA-BOT&template=https%3A%2F%2Fgithub.com%2FH1M4N5HU0P%2FMAFIA-BOT" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 
@@ -26,7 +26,7 @@
 </details>
 
 <details>
-  <summary> <h4>Credits 🏅</h4> </summary>
+  <summary> • 🏅CREDITS🏅 • </summary>
 
 • [JaaduBot](https://github.com/Amberyt/JaaduBot)
 
@@ -38,7 +38,7 @@
 </details>
 
 <details>
-  <summary> <h4>Official Supports ✅</h4> </summary>
+  <summary> • ✅OFFICIAL SUPPORTS✅ • </summary>
 
 ```
 Get help regarding setting up 
@@ -50,7 +50,7 @@ notifications in Update Channel.
 <a href="https://t.me/MafiaBot_Support"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
 </details>
 
-<h1 align="center">⚙️ Set-Up ⚙️</h1>
+<h1 align="center">⚙️ SET-UP ⚙️</h1>
 
 <details>
   <summary> <h2>Generate String Session</h2> </summary>
@@ -71,7 +71,7 @@ notifications in Update Channel.
 </details>
 
 <details>
-  <summary> <h3>HOSTING 😉</h3> </summary>
+  <summary> • 💫HOSTING💫 • </summary>
 
 - Choose A Hosting Site. And fill the mandatory vars.
 
@@ -101,7 +101,7 @@ notifications in Update Channel.
 </details>
 
 <details>
-  <summary> <h4>• LICENSE •</h4> </summary>
+  <summary> • 📄LICENSE📄 • </summary>
 
 ![](https://www.gnu.org/graphics/gplv3-or-later.png)
 
