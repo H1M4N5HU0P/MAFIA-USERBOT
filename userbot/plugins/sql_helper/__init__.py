@@ -8,6 +8,8 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from var import Var
 from userbot.Config import Config
 
+DB_URI = os.environ.get("DATABASE_URL", None)
+
 def start() -> scoped_session:
     db_url = (
         Config.DB_URI.replace("postgres://", "postgresql://")
