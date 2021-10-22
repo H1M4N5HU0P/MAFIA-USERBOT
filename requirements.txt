@@ -1,6 +1,5 @@
 Pillow>=5.3.0
 PyGithub
-PyDictionary
 PyPDF2
 pygments
 pymediainfo
@@ -66,7 +65,7 @@ selenium
 speedtest-cli>=2.0.2
 spotify_token
 spotdl
-sqlalchemy==1.4.23 
+sqlalchemy==1.4.20 
 telegraph
 twitter_scraper
 telethon==1.19.0
