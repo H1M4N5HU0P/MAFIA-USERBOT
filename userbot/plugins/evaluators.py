@@ -6,9 +6,12 @@ import os
 import sys
 import traceback
 
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd, delete_mafia
 from userbot import *
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
+
+LOGGER = Config.MAFIABOT_LOGGER
 
 @bot.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
 @bot.on(sudo_cmd(pattern="exec(?: |$|\n)(.*)", command="exec", allow_sudo=True))
@@ -17,9 +20,9 @@ async def _(event):
         return
     cmd = "".join(event.text.split(maxsplit=1)[1:])
     if not cmd:
-        return await edit_delete(event, "`What should i execute?..`")
+        return await delete_mafia(event, "`What should i execute?..`")
     mafiaevent = await edit_or_reply(event, "`Executing.....`")
-    process = await asyncio.create_subprocess_smafia(
+    process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
@@ -40,9 +43,9 @@ async def _(event):
         aslink=True,
         linktext=f"**•  Exec : **\n`{cmd}` \n\n**•  Result : **\n",
     )
-    if BOTLOG:
+    if LOGGER:
         await event.client.send_message(
-            BOTLOG_CHATID,
+            LOGGER,
             "Terminal command " + cmd + " was executed sucessfully.",
         )
 
@@ -54,8 +57,8 @@ async def _(event):
         return
     cmd = "".join(event.text.split(maxsplit=1)[1:])
     if not cmd:
-        return await edit_delete(event, "`What should i run ?..`")
-    mafiaevent = await edit_or_reply(event, "`Running ...`")
+        return await delete_mafia(event, "`What should i run ?..`")
+    mafiaevent = await edit_or_reply(event, "`Running... Check Your Logger for result`")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
@@ -79,17 +82,7 @@ async def _(event):
     else:
         evaluation = "Success"
     final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
-    await edit_or_reply(
-        mafiaevent,
-        text=final_output,
-        aslink=True,
-        linktext=f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n",
-    )
-    if BOTLOG:
-        await event.client.send_message(
-            BOTLOG_CHATID,
-            "eval command " + cmd + " was executed sucessfully.",
-        )
+    await event.client.send_message(LOGGER, f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n")
 
 
 async def aexec(code, smessatatus):
