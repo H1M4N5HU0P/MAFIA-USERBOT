@@ -664,3 +664,123 @@ async def waifutxt(text, chat_id, reply_to_id, bot, borg):
     if mafia:
         await bot.send_file(int(chat_id), mafia, reply_to=reply_to_id)
         await mafia.delete()
+
+
+async def reply_id(event):
+    reply_to_id = None
+    if event.sender_id in Config.SUDO_USERS:
+        reply_to_id = event.id
+    if event.reply_to_msg_id:
+        reply_to_id = event.reply_to_msg_id
+    return reply_to_id
+
+
+async def clippy(borg, msg, chat_id, reply_to_id):
+    chat = "@clippy"
+    async with borg.conversation(chat) as conv:
+        try:
+            msg = await conv.send_file(msg)
+            pic = await conv.get_response()
+            await borg.send_read_acknowledge(conv.chat_id)
+        except YouBlockedUserError:
+            await kakashi.edit("Please unblock @clippy and try again")
+            return
+        await borg.send_file(
+            chat_id,
+            pic,
+            reply_to=reply_to_id,
+        )
+    await borg.delete_messages(conv.chat_id, [msg.id, pic.id])
+
+
+def higlighted_text(
+    input_img,
+    text,
+    output_img,
+    background="black",
+    foreground="white",
+    transparency=255,
+    align="center",
+    direction=None,
+    text_wrap=2,
+    font_name=None,
+    font_size=60,
+    linespace="+2",
+    rad=20,
+    position=(0, 0),
+):
+    templait = Image.open(input_img)
+    # resize image
+    source_img = templait.convert("RGBA").resize((1024, 1024))
+    w, h = source_img.size
+    if font_name is None:
+        font_name = "userbot/helpers/styles/impact.ttf"
+    font = ImageFont.truetype(font_name, font_size)
+    ew, eh = position
+    # get text size
+    tw, th = font.getsize(text)
+    width = 50 + ew
+    hight = 30 + eh
+    # wrap the text & save in a list
+    mask_size = int((w / text_wrap) + 50)
+    input_text = "\n".join(wrap(text, int((40.0 / w) * mask_size)))
+    list_text = input_text.splitlines()
+    # create image with correct size and black background
+    if direction == "upwards":
+        list_text.reverse()
+        operator = "-"
+        hight = h - (th + int(th / 1.2)) + eh
+    else:
+        operator = "+"
+    for i, items in enumerate(list_text):
+        x, y = (font.getsize(list_text[i])[0] + 50, int(th * 2 - (th / 2)))
+        # align masks on the image....left,right & center
+        if align == "center":
+            width_align = "((mask_size-x)/2)"
+        elif align == "left":
+            width_align = "0"
+        elif align == "right":
+            width_align = "(mask_size-x)"
+        clr = ImageColor.getcolor(background, "RGBA")
+        if transparency == 0:
+            mask_img = Image.new(
+                "RGBA", (x, y), (clr[0], clr[1], clr[2], 0)
+            )  # background
+            mask_draw = ImageDraw.Draw(mask_img)
+            mask_draw.text((25, 8), list_text[i], foreground, font=font)
+        else:
+            mask_img = Image.new(
+                "RGBA", (x, y), (clr[0], clr[1], clr[2], transparency)
+            )  # background
+            # put text on mask
+            mask_draw = ImageDraw.Draw(mask_img)
+            mask_draw.text((25, 8), list_text[i], foreground, font=font)
+            # remove corner (source- https://stackoverflow.com/questions/11287402/how-to-round-corner-a-logo-without-white-backgroundtransparent-on-it-using-pi)
+            circle = Image.new("L", (rad * 2, rad * 2), 0)
+            draw = ImageDraw.Draw(circle)
+            draw.ellipse((0, 0, rad * 2, rad * 2), transparency)
+            alpha = Image.new("L", mask_img.size, transparency)
+            mw, mh = mask_img.size
+            alpha.paste(circle.crop((0, 0, rad, rad)), (0, 0))
+            alpha.paste(circle.crop((0, rad, rad, rad * 2)), (0, mh - rad))
+            alpha.paste(circle.crop((rad, 0, rad * 2, rad)), (mw - rad, 0))
+            alpha.paste(circle.crop((rad, rad, rad * 2, rad * 2)), (mw - rad, mh - rad))
+            mask_img.putalpha(alpha)
+        # put mask_img on source image & trans remove the corner white
+        trans = Image.new("RGBA", source_img.size)
+        trans.paste(
+            mask_img,
+            (
+                (int(width) + int(eval(f"{width_align}"))),
+                (eval(f"{hight} {operator}({y*i}+({int(linespace)*i}))")),
+            ),
+        )
+        source_img = Image.alpha_composite(source_img, trans)
+    source_img.save(output_img, "png")
+
+
+def deEmojify(inputString: str) -> str:
+    """Remove emojis and other non-safe characters from string"""
+    return get_emoji_regexp().sub("", inputString)
+
+
