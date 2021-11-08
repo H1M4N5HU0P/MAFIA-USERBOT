@@ -20,7 +20,7 @@ from PIL import Image
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import Channel, PollAnswer
 from validators.url import url
-
+from emoji import get_emoji_regexp
 
 MARGINS = [50, 150, 250, 350, 450]
 
