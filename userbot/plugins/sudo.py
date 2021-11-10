@@ -40,7 +40,7 @@ async def add(event):
     if sudousers:
         newsudo = f"{sudousers} {target}"
     else:
-        newsudo = f"{target}"
+        newsudo = int(f"{target}")
     await ok.edit(f"✅** Added**  `{target}`  **in Sudo User.**\n\n __Restarting Heroku to Apply Changes. Wait for a minute.__")
     heroku_Config[bot] = newsudo
 
@@ -62,7 +62,7 @@ async def _(event):
     except Exception:
         await eod(ok, f"Reply to a user to remove them from sudo.")
     if gett in sudousers:
-        newsudo = sudousers.replace(gett, "")
+        newsudo = sudousers.replace(f"gett", "")
         await ok.edit(f"❌** Removed**  `{target}`  from Sudo User.\n\n Restarting Heroku to Apply Changes. Wait for a minute.")
         heroku_Config[bot] = newsudo
     else:
