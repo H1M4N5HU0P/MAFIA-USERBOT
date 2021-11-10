@@ -1,5 +1,5 @@
 # Originally made by @rekcah for @javes05
-# porting to hellbot by @h1m4n5hu0p_the_badass...
+# porting to hellbot by @kraken_the_badass...
 # i asked rekcah before porting...not like other kangers....
 # keep credit if u wanna kang...
 # Now in MafiaBot
@@ -103,8 +103,8 @@ async def get_users(event):
     )
 
 
-@bot.on(admin_cmd(pattern="add ?(.*)"))
-@bot.on(sudo_cmd(pattern="add ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="invite ?(.*)"))
+@bot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
 
 
 CmdHelp("invite").add_command(
-  "add", "<username/id>", "Adds the given user to the group"
+  "invite", "<username/id>", "Adds the given user to the group"
 ).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
 ).add()
