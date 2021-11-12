@@ -103,14 +103,14 @@ async def get_users(event):
     )
 
 
-@bot.on(admin_cmd(pattern="invite ?(.*)"))
-@bot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="addmem ?(.*)"))
+@bot.on(sudo_cmd(pattern="addmem ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
-        await edit_or_reply(event, "`.invite` users to a chat, not to a Private Message")
+        await edit_or_reply(event, "`.addmem` users to a chat, not to a Private Message")
     else:
         logger.info(to_add_users)
         if not event.is_channel and event.is_group:
@@ -140,7 +140,7 @@ async def _(event):
 
 
 CmdHelp("invite").add_command(
-  "invite", "<username/id>", "Adds the given user to the group"
+  "addmem", "<username/id>", "Adds the given user to the group"
 ).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
 ).add()
