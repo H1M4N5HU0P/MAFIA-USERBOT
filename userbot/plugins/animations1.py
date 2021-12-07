@@ -27,8 +27,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
 
-@bot.on(admin_cmd(pattern="^Yo$"))
-@bot.on(sudo_cmd(pattern="^Yo$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="yo$", outgoing=True))
+@bot.on(sudo_cmd(pattern="yo$", allow_sudo=True))
 async def Ooo(e):
     if e.fwd_from:
         return
