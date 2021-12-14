@@ -4,7 +4,7 @@ import asyncio
 import random
 
 from . import *
-NUMBER = ["0", "1"]
+NUMBER = ["0"]
 
 RAIDHU = [
     "MADARCHOD TERI MAA KI CHUT ME GHUTKA KHAAKE THOOK DUNGA 🤣🤣",
@@ -223,8 +223,9 @@ async def _(event):
     if not queue:
         return
     async with event.client.action(event.chat_id, "typing"):
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.4)
     async with event.client.action(event.chat_id, "typing"):
+        await asyncio.sleep(1)
         await event.client.send_message(
             entity=event.chat_id,
             message="""{}""".format(random.choice(RAIDHU)),
