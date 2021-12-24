@@ -172,7 +172,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline("◀️ 𝙱𝚊𝚌𝚔, data=f"page({page})")])
+        buttons.append([custom.Button.inline("◀️ 𝙱𝚊𝚌𝚔", data=f"page({page})")])
         await event.edit(
             f"**📗 File:** `{commands}`\n**🔢 Number of commands :** `{len(CMD_HELP_BOT[commands]['commands'])}`",
             buttons=buttons,
