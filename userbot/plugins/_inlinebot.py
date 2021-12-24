@@ -222,7 +222,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         await event.edit(
             result,
             buttons=[
-                custom.Button.inline("◀️ 𝙱𝚊𝚌𝚔, data=f"Information[{page}]({cmd})")
+                custom.Button.inline("◀️ 𝙱𝚊𝚌𝚔", data=f"Information[{page}]({cmd})")
             ],
             link_preview=False,
         )
