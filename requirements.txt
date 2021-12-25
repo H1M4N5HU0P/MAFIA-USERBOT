@@ -33,6 +33,7 @@ geopy
 gsearch
 hachoir
 heroku3
+httplib2
 humanize
 justwatch
 lxml
@@ -64,11 +65,11 @@ selenium
 speedtest-cli>=2.0.2
 spotify_token
 spotdl
-sqlalchemy==1.4.28
+sqlalchemy==1.4.28 
 telegraph
 twitter_scraper
 telethon==1.24.0
-html-telegraph-poster==0.4.0
+html-telegraph-poster
 urbandict>=0.5
 validators
 wikipedia>=1.4.0
