@@ -68,7 +68,7 @@ async def _(event):
     process = await asyncio.create_subprocess_smafia(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
-    OUTPUT = f"**Files in [Hêllẞø†](t.me/mafiabot_official) DOWNLOADS Folder:**\n"
+    OUTPUT = f"**Files in [MafiaBot](t.me/MafiaBot_Support) DOWNLOADS Folder:**\n"
     stdout, stderr = await process.communicate()
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
